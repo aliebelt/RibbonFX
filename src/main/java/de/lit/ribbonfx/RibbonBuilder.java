@@ -15,7 +15,7 @@ public class RibbonBuilder {
 	 * Hidden constructor
 	 */
 	RibbonBuilder() {
-		ribbon = new Ribbon();
+		this.ribbon = new Ribbon();
 	}
 
 	public static RibbonBuilder create() {
@@ -41,7 +41,7 @@ public class RibbonBuilder {
 	}
 
 	public Ribbon build() {
-		return ribbon;
+		return this.ribbon;
 	}
 
 }

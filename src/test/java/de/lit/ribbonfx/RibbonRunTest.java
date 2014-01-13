@@ -6,12 +6,13 @@ import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import de.lit.ribbonfx.model.RibbonTab;
+import de.lit.ribbonfx.model.RibbonTabBuilder;
 
 public class RibbonRunTest extends Application {
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
-		RibbonTab ribbonTab = new RibbonTab();
+		RibbonTab ribbonTab = RibbonTabBuilder.create().title("First Tab").build();
 		Ribbon ribbon = RibbonBuilder.create().tabs(ribbonTab).build();
 
 		primaryStage.setScene(new Scene(ribbon, 650, 350, Color.TRANSPARENT));
