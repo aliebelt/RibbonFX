@@ -1,0 +1,29 @@
+#ribbonTabPane {
+	-fx-background-color: transparent;
+}
+#ribbonTabPane .tab-content-area {
+	-fx-control-inner-background: transparent;
+}
+#ribbonTabPane .tab-header-area {
+	-fx-padding: 2px 0px 0px 0px;
+}
+#ribbonTabPane .tab-header-area .tab-header-background {
+	-fx-background-color: linear-gradient(from 0% 0% to 0% 100%, #FFFFFF00 0%, #FFFFFFe5 90%);
+	-fx-background-insets: 0px 0px 2px 0px;
+	-fx-border-color:
+		#B6BABFff,
+		#F4F5F5;
+	-fx-border-width:
+		0px 0px 1px 0px,
+		0px 0px 1px 0px;
+	-fx-border-insets:
+		-1px -1px 0px -1px,
+		-1px -1px 1px -1px;
+	-fx-effect: null;
+}
+#ribbonTabPane .tab-header-area .headers-region .tab {
+	-fx-padding: 1px 13px 1px 13px;
+}
+#ribbonTabPane .tab-header-area .headers-region .tab .tab-label {
+	-fx-font-size: 11px;
+}
