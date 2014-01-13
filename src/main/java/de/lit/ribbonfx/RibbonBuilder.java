@@ -5,27 +5,27 @@ import javafx.scene.control.TabPane;
 /**
  * @author aliebelt
  */
-public class Ribbon {
+public class RibbonBuilder {
 
 	TabPane ribbon;
 
 	/**
 	 * Hidden constructor
 	 */
-	Ribbon() {
+	RibbonBuilder() {
 		ribbon = new TabPane();
 	}
 
-	public static Ribbon create() {
-		return new Ribbon();
+	public static RibbonBuilder create() {
+		return new RibbonBuilder();
 	}
 
-	public Ribbon applicationTab(RibbonTabApplication tab) {
+	public RibbonBuilder applicationTab(RibbonTabApplication tab) {
 		// TODO
 		return this;
 	}
 
-	public Ribbon ribbonTabs(RibbonTab... tabs) {
+	public RibbonBuilder ribbonTabs(RibbonTab... tabs) {
 		// TODO
 		return this;
 	}
