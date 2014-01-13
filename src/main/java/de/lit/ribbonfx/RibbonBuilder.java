@@ -1,19 +1,18 @@
 package de.lit.ribbonfx;
 
-import javafx.scene.control.TabPane;
 
 /**
  * @author aliebelt
  */
 public class RibbonBuilder {
 
-	TabPane ribbon;
+	Ribbon ribbon;
 
 	/**
 	 * Hidden constructor
 	 */
 	RibbonBuilder() {
-		ribbon = new TabPane();
+		ribbon = new Ribbon();
 	}
 
 	public static RibbonBuilder create() {
@@ -30,7 +29,7 @@ public class RibbonBuilder {
 		return this;
 	}
 
-	public TabPane build() {
+	public Ribbon build() {
 		return ribbon;
 	}
 
