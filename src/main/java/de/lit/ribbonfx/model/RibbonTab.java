@@ -1,5 +1,5 @@
 package de.lit.ribbonfx.model;
 
-public class Tab extends AbstractTab {
+public class RibbonTab extends AbstractTab {
 	// TODO
 }

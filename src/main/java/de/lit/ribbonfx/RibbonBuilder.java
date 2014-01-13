@@ -1,7 +1,8 @@
 package de.lit.ribbonfx;
 
-import de.lit.ribbonfx.model.AppTab;
-import de.lit.ribbonfx.model.Tab;
+import javafx.scene.control.Tab;
+import de.lit.ribbonfx.model.RibbonAppTab;
+import de.lit.ribbonfx.model.RibbonTab;
 
 /**
  * @author aliebelt
@@ -21,13 +22,21 @@ public class RibbonBuilder {
 		return new RibbonBuilder();
 	}
 
-	public RibbonBuilder applicationTab(AppTab applicationTab) {
+	public RibbonBuilder applicationTab(RibbonAppTab applicationTab) {
 		// TODO
 		return this;
 	}
 
-	public RibbonBuilder tabs(Tab... tabs) {
-		// TODO
+	public RibbonBuilder tabs(RibbonTab... tabs) {
+		for (RibbonTab iRibbonTab : tabs) {
+			// Initialize Tab
+			Tab iTab = new Tab();
+			iTab.setClosable(false);
+			// Customize Tag
+			iTab.textProperty().bind(iRibbonTab.title());
+			// Add Tab
+			this.ribbon.getTabs().add(iTab);
+		}
 		return this;
 	}
 
