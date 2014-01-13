@@ -6,8 +6,6 @@ import javafx.scene.control.TabPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import de.lit.ribbonfx.model.RibbonTab;
-import de.lit.ribbonfx.model.RibbonTabBuilder;
 
 public class RibbonRunTest extends Application {
 

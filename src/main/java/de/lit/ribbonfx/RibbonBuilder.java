@@ -2,8 +2,6 @@ package de.lit.ribbonfx;
 
 import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
-import de.lit.ribbonfx.model.RibbonAppTab;
-import de.lit.ribbonfx.model.RibbonTab;
 
 /**
  * @author aliebelt

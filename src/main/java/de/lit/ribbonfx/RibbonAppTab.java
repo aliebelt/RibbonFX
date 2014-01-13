@@ -1,4 +1,4 @@
-package de.lit.ribbonfx.model;
+package de.lit.ribbonfx;
 
 public class RibbonAppTab extends AbstractTab {
 

@@ -1,4 +1,4 @@
-package de.lit.ribbonfx.model;
+package de.lit.ribbonfx;
 
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
