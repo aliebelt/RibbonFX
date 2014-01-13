@@ -11,7 +11,7 @@ public class RibbonRunTest extends Application {
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
-		TabPane ribbon = Ribbon.create().build();
+		TabPane ribbon = RibbonBuilder.create().build();
 
 		primaryStage.setScene(new Scene(ribbon, Color.TRANSPARENT));
 		primaryStage.initStyle(StageStyle.UNIFIED);
