@@ -1,5 +1,8 @@
 package de.lit.ribbonfx;
 
+import de.lit.ribbonfx.model.RibbonTab;
+import de.lit.ribbonfx.model.RibbonTabApplication;
+
 
 /**
  * @author aliebelt
