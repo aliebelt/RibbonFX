@@ -32,6 +32,7 @@ public class RibbonBuilder {
 			// Initialize Tab
 			Tab iTab = new Tab();
 			iTab.setClosable(false);
+			iTab.setId("ribbonTab");
 			RibbonTabContentView ribbonToolBarView = new RibbonTabContentView();
 			iTab.setContent(ribbonToolBarView.getView());
 			// Customize Tag
