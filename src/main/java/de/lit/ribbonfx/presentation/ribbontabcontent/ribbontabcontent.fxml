@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.lit.ribbonfx.presentation.ribbontabcontent.RibbonTabContentPresenter">
+<children><AnchorPane id="ribbonTabContentContainer" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="87.0" /><AnchorPane id="ribbonToolBar" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="86.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+<children><HBox fx:id="hBoxRibbonGroups" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+</children></AnchorPane>
+</children></AnchorPane>

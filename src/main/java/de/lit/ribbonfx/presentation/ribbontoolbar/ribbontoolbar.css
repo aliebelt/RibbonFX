@@ -1,6 +1,0 @@
-#ribbonToolBar {
-	-fx-background-color: linear-gradient(from 0% 40% to 0% 100%, #FFFFFFff 0%, #E5E9EEff 100%);
-	-fx-border-color: transparent transparent #989796ff transparent;
-	-fx-border-insets: 0px;
-	-fx-effect: dropshadow(three-pass-box, #989796ff, 4, 0.3, 0, 0);
-}
