@@ -1,6 +1,7 @@
 package de.lit.ribbonfx;
 
 import javafx.scene.control.Tab;
+import javafx.scene.control.TabPane;
 import de.lit.ribbonfx.model.RibbonAppTab;
 import de.lit.ribbonfx.model.RibbonTab;
 
@@ -35,13 +36,13 @@ public class RibbonBuilder {
 			// Customize Tag
 			iTab.textProperty().bind(iRibbonTab.title());
 			// Add Tab
-			this.ribbon.getTabs().add(iTab);
+			this.ribbon.getRibbon().getTabs().add(iTab);
 		}
 		return this;
 	}
 
-	public Ribbon build() {
-		return this.ribbon;
+	public TabPane build() {
+		return this.ribbon.getRibbon();
 	}
 
 }
