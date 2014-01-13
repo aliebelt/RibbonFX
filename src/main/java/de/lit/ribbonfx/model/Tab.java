@@ -1,5 +1,5 @@
 package de.lit.ribbonfx.model;
 
-public class RibbonTabApplication {
+public class Tab {
 	// TODO
 }

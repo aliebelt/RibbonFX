@@ -1,7 +1,7 @@
 package de.lit.ribbonfx;
 
-import de.lit.ribbonfx.model.RibbonTab;
-import de.lit.ribbonfx.model.RibbonTabApplication;
+import de.lit.ribbonfx.model.Tab;
+import de.lit.ribbonfx.model.AppTab;
 
 
 /**
@@ -22,12 +22,12 @@ public class RibbonBuilder {
 		return new RibbonBuilder();
 	}
 
-	public RibbonBuilder applicationTab(RibbonTabApplication tab) {
+	public RibbonBuilder applicationTab(AppTab tab) {
 		// TODO
 		return this;
 	}
 
-	public RibbonBuilder ribbonTabs(RibbonTab... tabs) {
+	public RibbonBuilder ribbonTabs(Tab... tabs) {
 		// TODO
 		return this;
 	}
