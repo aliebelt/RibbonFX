@@ -24,6 +24,9 @@
 #ribbonTabPane .tab-header-area .headers-region .tab {
 	-fx-padding: 0px 11px 0px 11px;
 }
+#ribbonTabPane .tab-header-area .headers-region .tab .tab-container .focus-indicator {
+	-fx-border-width: 0px;
+}
 #ribbonTabPane .tab-header-area .headers-region .tab .tab-label {
 	-fx-font-size: 11px;
 }
