@@ -1,11 +1,11 @@
 package de.lit.ribbonfx;
 
-public class RibbonTab extends AbstractTab {
+public class TabData extends AbstractTabData {
 
 	/**
 	 * Hidden constructor
 	 */
-	RibbonTab() {
+	TabData() {
 		// Empty
 	}
 

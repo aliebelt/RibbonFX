@@ -6,13 +6,13 @@ package de.lit.ribbonfx;
  */
 public class RibbonTabBuilder {
 
-	RibbonTab ribbonTab;
+	TabData ribbonTab;
 
 	/**
 	 * Hidden constructor
 	 */
 	RibbonTabBuilder() {
-		this.ribbonTab = new RibbonTab();
+		this.ribbonTab = new TabData();
 	}
 
 	public static RibbonTabBuilder create() {
@@ -24,7 +24,7 @@ public class RibbonTabBuilder {
 		return this;
 	}
 
-	public RibbonTab build() {
+	public TabData build() {
 		return this.ribbonTab;
 	}
 

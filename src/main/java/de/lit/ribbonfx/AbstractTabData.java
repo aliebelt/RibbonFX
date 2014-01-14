@@ -3,11 +3,11 @@ package de.lit.ribbonfx;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
-class AbstractTab {
+class AbstractTabData {
 
 	StringProperty title;
 
-	public AbstractTab() {
+	public AbstractTabData() {
 		this.title = new SimpleStringProperty("unnamed");
 	}
 

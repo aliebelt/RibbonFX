@@ -9,26 +9,26 @@ import de.lit.ribbonfx.presentation.ribbontabcontent.RibbonTabContentView;
  */
 public class RibbonBuilder {
 
-	Ribbon ribbon;
+	Data ribbon;
 
 	/**
 	 * Hidden constructor
 	 */
 	RibbonBuilder() {
-		this.ribbon = new Ribbon();
+		this.ribbon = new Data();
 	}
 
 	public static RibbonBuilder create() {
 		return new RibbonBuilder();
 	}
 
-	public RibbonBuilder applicationTab(RibbonAppTab applicationTab) {
+	public RibbonBuilder applicationTab(AppTabData applicationTab) {
 		// TODO
 		return this;
 	}
 
-	public RibbonBuilder tabs(RibbonTab... tabs) {
-		for (RibbonTab iRibbonTab : tabs) {
+	public RibbonBuilder tabs(TabData... tabs) {
+		for (TabData iRibbonTab : tabs) {
 			// Initialize Tab
 			Tab iTab = new Tab();
 			iTab.setClosable(false);
