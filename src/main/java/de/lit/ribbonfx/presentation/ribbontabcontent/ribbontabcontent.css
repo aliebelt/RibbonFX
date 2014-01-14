@@ -1,11 +1,6 @@
 #ribbonToolBar {
-	-fx-background-color:
-		#8B9097ff,
-		linear-gradient(from 0% 60% to 0% 100%, #FFFFFFff 0%, #E5E9EEff 100%);
-	-fx-background-insets:
-		0px,
-		0px 0px 1px 0px;
-	-fx-border-width: 0px;
+	-fx-background-color: linear-gradient(from 0% 60% to 0% 100%, #FFFFFFff 0%, #E5E9EEff 100%);
+	-fx-border-color: transparent #5D6C7Aff #8B9097ff #5D6C7Aff;
 	-fx-effect: dropshadow(three-pass-box, #8B9097ff, 4, 0.45, 0, 0);
 }
 #ribbonTabContentContainer {
