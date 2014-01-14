@@ -1,7 +1,7 @@
 package de.lit.ribbonfx;
 
+import javafx.scene.control.Control;
 import javafx.scene.control.Tab;
-import javafx.scene.control.TabPane;
 import de.lit.ribbonfx.presentation.ribbontabcontent.RibbonTabContentView;
 
 /**
@@ -43,7 +43,7 @@ public class RibbonBuilder {
 		return this;
 	}
 
-	public TabPane build() {
+	public Control build() {
 		return this.ribbon.getRibbon();
 	}
 
