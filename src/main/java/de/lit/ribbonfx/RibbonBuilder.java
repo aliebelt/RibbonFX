@@ -1,6 +1,5 @@
 package de.lit.ribbonfx;
 
-import javafx.scene.control.Control;
 import javafx.scene.control.Tab;
 import de.lit.ribbonfx.presentation.toolbar.ToolBarView;
 
@@ -9,13 +8,13 @@ import de.lit.ribbonfx.presentation.toolbar.ToolBarView;
  */
 public class RibbonBuilder {
 
-	Data ribbon;
+	Ribbon ribbon;
 
 	/**
 	 * Hidden constructor
 	 */
 	RibbonBuilder() {
-		this.ribbon = new Data();
+		this.ribbon = new Ribbon();
 	}
 
 	public static RibbonBuilder create() {
@@ -38,13 +37,13 @@ public class RibbonBuilder {
 			// Customize Tag
 			iTab.textProperty().bind(iRibbonTab.title());
 			// Add Tab
-			this.ribbon.getRibbon().getTabs().add(iTab);
+			this.ribbon.getTabPane().getTabs().add(iTab);
 		}
 		return this;
 	}
 
-	public Control build() {
-		return this.ribbon.getRibbon();
+	public Ribbon build() {
+		return this.ribbon;
 	}
 
 }
