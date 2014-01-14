@@ -1,7 +1,7 @@
 package de.lit.ribbonfx;
 
 import javafx.scene.control.TabPane;
-import de.lit.ribbonfx.presentation.ribbon.RibbonView;
+import de.lit.ribbonfx.presentation.container.ContainerView;
 
 public class Data {
 
@@ -11,7 +11,7 @@ public class Data {
 	 * Hidden constructor
 	 */
 	Data() {
-		TabPane ribbon = (TabPane) new RibbonView().getView();
+		TabPane ribbon = (TabPane) new ContainerView().getView();
 		this.ribbon = ribbon;
 	}
 

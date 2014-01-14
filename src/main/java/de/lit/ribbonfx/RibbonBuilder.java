@@ -2,7 +2,7 @@ package de.lit.ribbonfx;
 
 import javafx.scene.control.Control;
 import javafx.scene.control.Tab;
-import de.lit.ribbonfx.presentation.ribbontabcontent.RibbonTabContentView;
+import de.lit.ribbonfx.presentation.toolbar.ToolBarView;
 
 /**
  * @author aliebelt
@@ -33,7 +33,7 @@ public class RibbonBuilder {
 			Tab iTab = new Tab();
 			iTab.setClosable(false);
 			iTab.setId("ribbonTab");
-			RibbonTabContentView ribbonToolBarView = new RibbonTabContentView();
+			ToolBarView ribbonToolBarView = new ToolBarView();
 			iTab.setContent(ribbonToolBarView.getView());
 			// Customize Tag
 			iTab.textProperty().bind(iRibbonTab.title());
