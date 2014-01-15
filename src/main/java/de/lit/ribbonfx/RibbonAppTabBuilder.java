@@ -3,33 +3,25 @@ package de.lit.ribbonfx;
 /**
  * @author aliebelt
  */
-public class RibbonAppTabBuilder {
-
-	AppTabData appTabData;
+public class RibbonAppTabBuilder extends AbstractTabBuilder<RibbonAppTabBuilder> {
 
 	/**
 	 * Hidden constructor
 	 */
 	RibbonAppTabBuilder() {
-		this.appTabData = new AppTabData();
+		super.tabData = new AppTabData();
 	}
 
 	public static RibbonAppTabBuilder create() {
 		return new RibbonAppTabBuilder();
 	}
 
-	public RibbonAppTabBuilder title(String title) {
-		this.appTabData.title().set(title);
-		return this;
-	}
-
-	public RibbonAppTabBuilder disabled(boolean disabled) {
-		this.appTabData.disabled().set(disabled);
-		return this;
-	}
-
 	public AppTabData build() {
-		return this.appTabData;
+		return getAppTabData();
+	}
+
+	private AppTabData getAppTabData() {
+		return (AppTabData) super.tabData;
 	}
 
 }

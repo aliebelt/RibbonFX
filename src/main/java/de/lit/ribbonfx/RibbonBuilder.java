@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javafx.scene.control.Tab;
+import de.lit.ribbonfx.presentation.tabcontent.TabContentPresenter;
 import de.lit.ribbonfx.presentation.tabcontent.TabContentView;
 
 /**
@@ -46,10 +47,12 @@ public class RibbonBuilder {
 			iTab.setClosable(false);
 			iTab.setId("ribbonAppTab");
 			TabContentView tabContentView = new TabContentView();
+			TabContentPresenter tabContentPresenter = (TabContentPresenter) tabContentView.getPresenter();
 			iTab.setContent(tabContentView.getView());
 			// Customize Tag
 			iTab.textProperty().bind(this.appTabData.title());
 			iTab.disableProperty().bind(this.appTabData.disabled());
+			tabContentPresenter.setContent(this.appTabData.content().get());
 			// Add Tab
 			this.ribbon.getTabPane().getTabs().add(iTab);
 		}
@@ -60,10 +63,12 @@ public class RibbonBuilder {
 			iTab.setClosable(false);
 			iTab.setId("ribbonTab");
 			TabContentView tabContentView = new TabContentView();
+			TabContentPresenter tabContentPresenter = (TabContentPresenter) tabContentView.getPresenter();
 			iTab.setContent(tabContentView.getView());
 			// Customize Tag
 			iTab.textProperty().bind(iTabData.title());
 			iTab.disableProperty().bind(iTabData.disabled());
+			tabContentPresenter.setContent(iTabData.content().get());
 			// Add Tab
 			this.ribbon.getTabPane().getTabs().add(iTab);
 			if (noTabIsSelected) {
