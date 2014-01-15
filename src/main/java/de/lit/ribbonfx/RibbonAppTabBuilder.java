@@ -5,13 +5,13 @@ package de.lit.ribbonfx;
  */
 public class RibbonAppTabBuilder {
 
-	AppTabData ribbonAppTab;
+	AppTabData appTabData;
 
 	/**
 	 * Hidden constructor
 	 */
 	RibbonAppTabBuilder() {
-		this.ribbonAppTab = new AppTabData();
+		this.appTabData = new AppTabData();
 	}
 
 	public static RibbonAppTabBuilder create() {
@@ -19,12 +19,17 @@ public class RibbonAppTabBuilder {
 	}
 
 	public RibbonAppTabBuilder title(String title) {
-		this.ribbonAppTab.title().set(title);
+		this.appTabData.title().set(title);
+		return this;
+	}
+
+	public RibbonAppTabBuilder disabled(boolean disabled) {
+		this.appTabData.disabled().set(disabled);
 		return this;
 	}
 
 	public AppTabData build() {
-		return this.ribbonAppTab;
+		return this.appTabData;
 	}
 
 }

@@ -10,9 +10,10 @@ public class RibbonRunTest extends Application {
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
-		TabData ribbonTab1 = RibbonTabBuilder.create().title("Start").build();
-		TabData ribbonTab2 = RibbonTabBuilder.create().title("Einfügen").build();
-		Ribbon ribbon = RibbonBuilder.create().tabs(ribbonTab1, ribbonTab2).build();
+		AppTabData appTab = RibbonAppTabBuilder.create().title("Datei").build();
+		TabData tab1 = RibbonTabBuilder.create().title("Start").build();
+		TabData tab2 = RibbonTabBuilder.create().title("Einfügen").build();
+		Ribbon ribbon = RibbonBuilder.create().appTab(appTab).tabs(tab1, tab2).build();
 
 		primaryStage.setScene(new Scene(ribbon, 650, 350, Color.TRANSPARENT));
 		primaryStage.initStyle(StageStyle.UNIFIED);

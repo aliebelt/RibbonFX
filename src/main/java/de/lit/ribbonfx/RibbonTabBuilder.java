@@ -1,18 +1,17 @@
 package de.lit.ribbonfx;
 
-
 /**
  * @author aliebelt
  */
 public class RibbonTabBuilder {
 
-	TabData ribbonTab;
+	TabData tabData;
 
 	/**
 	 * Hidden constructor
 	 */
 	RibbonTabBuilder() {
-		this.ribbonTab = new TabData();
+		this.tabData = new TabData();
 	}
 
 	public static RibbonTabBuilder create() {
@@ -20,12 +19,17 @@ public class RibbonTabBuilder {
 	}
 
 	public RibbonTabBuilder title(String title) {
-		this.ribbonTab.title().set(title);
+		this.tabData.title().set(title);
+		return this;
+	}
+
+	public RibbonTabBuilder disabled(boolean disabled) {
+		this.tabData.disabled().set(disabled);
 		return this;
 	}
 
 	public TabData build() {
-		return this.ribbonTab;
+		return this.tabData;
 	}
 
 }

@@ -33,6 +33,44 @@
 #ribbonTabPane .tab-header-area .headers-region .tab .tab-label {
 	-fx-font-size: 11px;
 }
+
+
+#ribbonAppTab {
+	-fx-background-color:
+		#00346Bff,
+		linear-gradient(from 0% 0% to 0% 100%, #005A94ff 0%, #88BCE2ff 100%);
+	-fx-background-insets:
+		0px 0px 1px 1px,
+		1px 1px 1px 2px;
+	-fx-background-radius:
+		3px 3px 0px 0px,
+		2px 2px 0px 0px;
+	-fx-border-color: transparent;
+}
+#ribbonAppTab:hover {
+	-fx-background-color:
+		#00346Bff,
+		#88BCE2ff,
+		linear-gradient(from 0% 0% to 0% 100%, #005A94ff 0%, #88BCE2ff 100%);
+	-fx-background-insets:
+		0px,
+		1px,
+		2px;
+}
+#ribbonAppTab:selected  {
+	-fx-background-color:
+		#00346Bff,
+		linear-gradient(from 0% 0% to 0% 100%, #005A94ff 0%, #88BCE2ff 100%);
+	-fx-background-insets:
+		0px,
+		1px;
+	-fx-border-color: transparent transparent #88BCE2ff transparent;
+}
+#ribbonAppTab .tab-label {
+	-fx-text-fill: white;
+	-fx-padding: 0px 2px 0px 3px;
+}
+
 #ribbonTab {
 	-fx-background-color: transparent;
 	-fx-background-radius:
