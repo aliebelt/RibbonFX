@@ -4,5 +4,8 @@
 	-fx-effect: dropshadow(three-pass-box, #8B9097ff, 4, 0.45, 0, 0);
 }
 #ribbonTabContentContainer {
-	-fx-background-color: transparent;
+	-fx-background-color: white;
+	-fx-background-radius: 0px 0px 1px 1px;
+	-fx-border-color: #5D6C7A;
+	-fx-border-radius: 0px 0px 1px 1px;
 }
