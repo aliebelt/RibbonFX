@@ -1,11 +1,32 @@
 #ribbonToolBar {
 	-fx-background-color: linear-gradient(from 0% 60% to 0% 100%, #FFFFFFff 0%, #E5E9EEff 100%);
-	-fx-border-color: transparent #5D6C7Aff #8B9097ff #5D6C7Aff;
+	-fx-border-color:
+		transparent #BDBFC0ff #8B9097ff #BDBFC0ff,
+		#121417ff;
+	-fx-border-insets:
+		0px,
+		0px 1px 0px 1px;
+	-fx-border-width:
+		0px 1px 1px 1px,
+		0px 1px 0px 1px;
 	-fx-effect: dropshadow(three-pass-box, #8B9097ff, 4, 0.45, 0, 0);
+}
+#ribbonTabContentBorder {
+	-fx-background-color: transparent;
+	-fx-border-color:
+		#BDBFC0ff,
+		#121417ff;
+	-fx-border-insets:
+		0px,
+		1px;
+	-fx-border-width:
+		0px 1px 1px 1px,
+		0px 1px 1px 1px;
+	-fx-border-radius:
+		0px 0px 1px 1px,
+		0px 0px 1px 1px;
 }
 #ribbonTabContentContainer {
 	-fx-background-color: white;
 	-fx-background-radius: 0px 0px 1px 1px;
-	-fx-border-color: #5D6C7A;
-	-fx-border-radius: 0px 0px 1px 1px;
 }

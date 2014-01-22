@@ -10,6 +10,6 @@
       <children>
         <HBox fx:id="hBoxRibbonGroups" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
       </children>
-    </AnchorPane>
+    </AnchorPane><AnchorPane id="ribbonTabContentBorder" mouseTransparent="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="85.0" />
   </children>
 </AnchorPane>
