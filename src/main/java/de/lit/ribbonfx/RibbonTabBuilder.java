@@ -16,6 +16,11 @@ public class RibbonTabBuilder extends AbstractTabBuilder<RibbonTabBuilder> {
 		return new RibbonTabBuilder();
 	}
 
+	public RibbonTabBuilder groups(GroupData... groups) {
+		getTabData().groupDataList().addAll(groups);
+		return this;
+	}
+
 	public TabData build() {
 		return getTabData();
 	}

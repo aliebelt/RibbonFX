@@ -1,9 +1,10 @@
 package de.lit.ribbonfx;
 
-import java.util.ArrayList;
-import java.util.List;
-
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.scene.control.Tab;
+import de.lit.ribbonfx.presentation.group.GroupPresenter;
+import de.lit.ribbonfx.presentation.group.GroupView;
 import de.lit.ribbonfx.presentation.tabcontent.TabContentPresenter;
 import de.lit.ribbonfx.presentation.tabcontent.TabContentView;
 
@@ -14,14 +15,14 @@ public class RibbonBuilder {
 
 	Ribbon ribbon;
 	AppTabData appTabData;
-	List<TabData> tabDataList;
+	ObservableList<TabData> tabDataList;
 
 	/**
 	 * Hidden constructor
 	 */
 	RibbonBuilder() {
 		this.ribbon = new Ribbon();
-		this.tabDataList = new ArrayList<TabData>();
+		this.tabDataList = FXCollections.observableArrayList();
 	}
 
 	public static RibbonBuilder create() {
@@ -34,9 +35,7 @@ public class RibbonBuilder {
 	}
 
 	public RibbonBuilder tabs(TabData... tabs) {
-		for (TabData iTabData : tabs) {
-			this.tabDataList.add(iTabData);
-		}
+		this.tabDataList.addAll(tabs);
 		return this;
 	}
 
@@ -62,21 +61,29 @@ public class RibbonBuilder {
 			Tab iTab = new Tab();
 			iTab.setClosable(false);
 			iTab.setId("ribbonTab");
-			TabContentView tabContentView = new TabContentView();
-			TabContentPresenter tabContentPresenter = (TabContentPresenter) tabContentView.getPresenter();
-			iTab.setContent(tabContentView.getView());
+			TabContentView iTabContentView = new TabContentView();
+			TabContentPresenter iTabContentPresenter = (TabContentPresenter) iTabContentView.getPresenter();
+			iTab.setContent(iTabContentView.getView());
 			// Customize Tag
 			iTab.textProperty().bind(iTabData.title());
 			iTab.disableProperty().bind(iTabData.disabled());
-			tabContentPresenter.setContent(iTabData.content().get());
+			iTabContentPresenter.setContent(iTabData.content().get());
 			// Add Tab
 			this.ribbon.getTabPane().getTabs().add(iTab);
 			if (noTabIsSelected) {
 				this.ribbon.getTabPane().getSelectionModel().select(iTab);
 				noTabIsSelected = false;
 			}
+			for (GroupData jGroupData : iTabData.groupDataList()) {
+				// Initialize Group
+				GroupView jGroupView = new GroupView();
+				GroupPresenter jGroupPresenter = (GroupPresenter) jGroupView.getPresenter();
+				// Customize Group
+				jGroupPresenter.title().bind(jGroupData.title());
+				// Add Group
+				iTabContentPresenter.addGroup(jGroupView.getView());
+			}
 		}
 		return this.ribbon;
 	}
-
 }
