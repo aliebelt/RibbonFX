@@ -53,17 +53,17 @@
 		#88BCE2ff,
 		linear-gradient(from 0% 0% to 0% 100%, #005A94ff 0%, #88BCE2ff 100%);
 	-fx-background-insets:
-		0px,
-		1px,
-		2px;
+		0px 0px 1px 1px,
+		1px 1px 1px 2px,
+		2px 2px 2px 3px;
 }
 #ribbonAppTab:selected  {
 	-fx-background-color:
 		#00346Bff,
 		linear-gradient(from 0% 0% to 0% 100%, #005A94ff 0%, #88BCE2ff 100%);
 	-fx-background-insets:
-		0px,
-		1px;
+		0px 0px 0px 1px,
+		1px 1px 1px 2px;
 	-fx-border-color: transparent transparent #88BCE2ff transparent;
 }
 #ribbonAppTab .tab-label {
