@@ -26,7 +26,9 @@ public class TabContentPresenter implements Initializable {
 	}
 
 	public void addGroup(Parent group) {
-		this.hBoxRibbonGroups.getChildren().add(group);
+		if (group != null) {
+			this.hBoxRibbonGroups.getChildren().add(group);
+		}
 	}
 
 	@FXML

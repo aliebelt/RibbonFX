@@ -3,13 +3,14 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.lit.ribbonfx.presentation.tabcontent.TabContentPresenter">
+<AnchorPane id="" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="de.lit.ribbonfx.presentation.tabcontent.TabContentPresenter">
   <children>
-    <AnchorPane id="ribbonTabContentContainer" fx:id="ribbonTabContentContainer" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="85.0" />
+    <AnchorPane fx:id="ribbonTabContentContainer" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="86.0" />
     <AnchorPane id="ribbonToolBar" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="86.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
       <children>
         <HBox fx:id="hBoxRibbonGroups" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
       </children>
-    </AnchorPane><AnchorPane id="ribbonTabContentBorder" mouseTransparent="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="85.0" />
+    </AnchorPane>
+    <AnchorPane id="ribbonTabContentBorder" mouseTransparent="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="85.0" />
   </children>
 </AnchorPane>

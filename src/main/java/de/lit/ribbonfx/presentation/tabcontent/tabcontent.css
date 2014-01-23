@@ -27,6 +27,6 @@
 		0px 0px 1px 1px;
 }
 #ribbonTabContentContainer {
-	-fx-background-color: white;
+	-fx-background-color: linear-gradient(from 0% 0% to 0% 100%, #E9EDF1ff 0%, #D0D5DBff 100%);
 	-fx-background-radius: 0px 0px 1px 1px;
 }

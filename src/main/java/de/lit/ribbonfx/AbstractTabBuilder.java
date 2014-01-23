@@ -1,5 +1,7 @@
 package de.lit.ribbonfx;
 
+import javafx.scene.Node;
+
 /**
  * @author aliebelt
  */
@@ -16,6 +18,12 @@ public abstract class AbstractTabBuilder<T> {
 	@SuppressWarnings("unchecked")
 	public T disabled(boolean disabled) {
 		this.tabData.disabled().set(disabled);
+		return (T) this;
+	}
+
+	@SuppressWarnings("unchecked")
+	public T content(Node content) {
+		this.tabData.content().set(content);
 		return (T) this;
 	}
 
