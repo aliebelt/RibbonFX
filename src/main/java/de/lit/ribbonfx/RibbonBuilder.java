@@ -1,8 +1,10 @@
 package de.lit.ribbonfx;
 
+import javafx.beans.Observable;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.Tab;
+import javafx.scene.paint.Paint;
 import de.lit.ribbonfx.presentation.group.GroupPresenter;
 import de.lit.ribbonfx.presentation.group.GroupView;
 import de.lit.ribbonfx.presentation.tabcontent.TabContentPresenter;
@@ -16,6 +18,7 @@ public class RibbonBuilder {
 	Ribbon ribbon;
 	AppTabData appTabData;
 	ObservableList<TabData> tabDataList;
+	Paint contentBackground;
 
 	/**
 	 * Hidden constructor
@@ -39,21 +42,30 @@ public class RibbonBuilder {
 		return this;
 	}
 
+	public RibbonBuilder background(Paint contentBackground) {
+		this.contentBackground = contentBackground;
+		return this;
+	}
+
 	public Ribbon build() {
 		if (this.appTabData != null) {
 			// Initialize Tab
-			Tab iTab = new Tab();
-			iTab.setClosable(false);
-			iTab.setId("ribbonAppTab");
-			TabContentView tabContentView = new TabContentView();
-			TabContentPresenter tabContentPresenter = (TabContentPresenter) tabContentView.getPresenter();
-			iTab.setContent(tabContentView.getView());
+			Tab appTab = new Tab();
+			appTab.setClosable(false);
+			appTab.setId("ribbonAppTab");
+			TabContentView appTabContentView = new TabContentView();
+			TabContentPresenter appTabContentPresenter = (TabContentPresenter) appTabContentView.getPresenter();
+			appTab.setContent(appTabContentView.getView());
 			// Customize Tag
-			iTab.textProperty().bind(this.appTabData.title());
-			iTab.disableProperty().bind(this.appTabData.disabled());
-			tabContentPresenter.setContent(this.appTabData.content().get());
+			appTab.textProperty().bind(this.appTabData.title());
+			appTab.disableProperty().bind(this.appTabData.disabled());
+			appTabContentPresenter.setContent(this.appTabData.content().get());
+			appTab.selectedProperty().addListener((Observable o) -> appTabContentPresenter.setSelected(appTab.isSelected()));
+			if (this.contentBackground != null) {
+				appTabContentPresenter.setContentBackground(this.contentBackground);
+			}
 			// Add Tab
-			this.ribbon.getTabPane().getTabs().add(iTab);
+			this.ribbon.getTabPane().getTabs().add(appTab);
 		}
 		boolean noTabIsSelected = true;
 		for (TabData iTabData : this.tabDataList) {
@@ -68,6 +80,10 @@ public class RibbonBuilder {
 			iTab.textProperty().bind(iTabData.title());
 			iTab.disableProperty().bind(iTabData.disabled());
 			iTabContentPresenter.setContent(iTabData.content().get());
+			iTab.selectedProperty().addListener((Observable o) -> iTabContentPresenter.setSelected(iTab.isSelected()));
+			if (this.contentBackground != null) {
+				iTabContentPresenter.setContentBackground(this.contentBackground);
+			}
 			// Add Tab
 			this.ribbon.getTabPane().getTabs().add(iTab);
 			if (noTabIsSelected) {

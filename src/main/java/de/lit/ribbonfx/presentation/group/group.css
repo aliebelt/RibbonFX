@@ -3,3 +3,18 @@
 	-fx-text-fill: #666D7Cff;
 	-fx-font-size: 11px;
 }
+
+#groupSeparator {
+	-fx-padding: 0px;
+}
+#groupSeparator .line {
+	-fx-border-color:
+		linear-gradient(from 0% 0% to 0% 100%, #FDFDFDff 0%, #FFFFFFff 100%),
+		linear-gradient(from 0% 0% to 0% 100%, #F6F7F8ff 0%, #B0B6BCff 100%);;
+	-fx-border-width:
+		1px,
+		0px 1px 0px 0px;
+	-fx-border-insets:
+		0px,
+		0px 1px 0px 1px;
+}
