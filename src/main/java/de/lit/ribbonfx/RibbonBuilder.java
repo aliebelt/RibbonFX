@@ -76,6 +76,9 @@ public class RibbonBuilder {
 			if (this.contentBackground != null) {
 				appTabContentPresenter.setContentBackground(this.contentBackground);
 			}
+			if (this.accent != null) {
+				appTabContentPresenter.setAccent(this.accent);
+			}
 			// Add Tab
 			this.ribbon.getTabPane().getTabs().add(appTab);
 		}
@@ -95,6 +98,9 @@ public class RibbonBuilder {
 			iTab.selectedProperty().addListener((Observable o) -> iTabContentPresenter.setSelected(iTab.isSelected()));
 			if (this.contentBackground != null) {
 				iTabContentPresenter.setContentBackground(this.contentBackground);
+			}
+			if (this.accent != null) {
+				iTabContentPresenter.setAccent(this.accent);
 			}
 			// Add Tab
 			this.ribbon.getTabPane().getTabs().add(iTab);
