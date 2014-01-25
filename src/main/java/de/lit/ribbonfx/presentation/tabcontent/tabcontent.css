@@ -1,5 +1,5 @@
 #ribbonToolBar {
-	-fx-background-color: linear-gradient(from 0% 60% to 0% 100%, #FFFFFFff 0%, #E5E9EEff 100%);
+	-fx-background-color: linear-gradient(from 0% 50% to 0% 100%, #FFFFFFff 0%, #E5E9EEff 100%);
 	-fx-border-color:
 		transparent #BDBFC0ff #8B9097ff #BDBFC0ff,
 		#121417ff;

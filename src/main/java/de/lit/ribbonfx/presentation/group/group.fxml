@@ -4,7 +4,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="85.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="de.lit.ribbonfx.presentation.group.GroupPresenter">
+<AnchorPane id="ribbonGroupContainer" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="85.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="de.lit.ribbonfx.presentation.group.GroupPresenter">
   <children>
     <HBox id="HBox" alignment="CENTER" prefHeight="-1.0" spacing="3.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
       <children>

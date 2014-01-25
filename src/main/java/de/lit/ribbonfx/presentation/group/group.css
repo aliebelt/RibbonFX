@@ -1,4 +1,14 @@
 
+#ribbonGroupContainer:hover {
+	-fx-background-color:
+		#FAFBFBff,
+		linear-gradient(from 0% 0% to 0% 100%, #FEFEFEff, #E1E7EDff),
+		radial-gradient(center 55% 100%, radius 75%, #FFFFFFdd, #FFFFFF00);
+	-fx-background-insets:
+		0px,
+		0px 0px 1px 0px;
+}
+
 #labelGroupTitle {
 	-fx-text-fill: #666D7Cff;
 	-fx-font-size: 11px;
