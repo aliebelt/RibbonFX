@@ -104,7 +104,7 @@ public class RibbonBuilder {
 			}
 			// Add Tab
 			this.ribbon.getTabPane().getTabs().add(iTab);
-			if (noTabIsSelected) {
+			if (iTabData.disabled().get() == false && noTabIsSelected) {
 				this.ribbon.getTabPane().getSelectionModel().select(iTab);
 				noTabIsSelected = false;
 			}
