@@ -41,6 +41,8 @@
 		derive(-fx-ribbon-color-base, -30%),
 		derive(-fx-ribbon-color-base, 30%),
 		derive(-fx-ribbon-color-base, 15%),
+		derive(-fx-ribbon-color-base, 10%),
+		derive(-fx-ribbon-color-base, 5%),
 		-fx-ribbon-color-base,
 		radial-gradient(center 50% 135%, radius 90%, derive(-fx-ribbon-color-base, 70%) 40%, #FFFFFF00);
 	-fx-background-insets:
@@ -48,6 +50,8 @@
 		1px 1px 1px 2px,
 		2px 2px 1px 3px,
 		3px 3px 1px 4px,
+		4px 3px 1px 4px,
+		5px 3px 1px 4px,
 		1px 1px 1px 2px;
 	-fx-background-radius:
 		2px 2px 0px 0px,
@@ -62,6 +66,8 @@
 		derive(-fx-ribbon-color-base, -30%),
 		derive(-fx-ribbon-color-base, 60%),
 		derive(-fx-ribbon-color-base, 15%),
+		derive(-fx-ribbon-color-base, 10%),
+		derive(-fx-ribbon-color-base, 5%),
 		-fx-ribbon-color-base,
 		radial-gradient(center 50% 135%, radius 90%, derive(-fx-ribbon-color-base, 90%) 40%, #FFFFFF00);
 }
