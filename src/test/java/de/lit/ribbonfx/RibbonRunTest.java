@@ -21,7 +21,6 @@ public class RibbonRunTest extends Application {
 		TabData tab2 = RibbonTabBuilder.create().title("Einfügen").groups(groupData21).content(labelTab23).build();
 		TabData tab3 = RibbonTabBuilder.create().title("Seitenlayout").content(labelTab23).build();
 		Ribbon ribbon = RibbonBuilder.create().appTab(appTab).tabs(tab1, tab2, tab3).build();
-
 		primaryStage.setScene(new Scene(ribbon, 650, 350, Color.TRANSPARENT));
 		primaryStage.initStyle(StageStyle.UNIFIED);
 		primaryStage.show();

@@ -1,5 +1,6 @@
 #ribbonTabPane {
 	-fx-background-color: transparent;
+	-fx-ribbon-color-base: #006400ff;
 }
 #ribbonTabPane .tab-content-area {
 	-fx-control-inner-background: transparent;
@@ -37,34 +38,48 @@
 
 #ribbonAppTab {
 	-fx-background-color:
-		#00346Bff,
-		linear-gradient(from 0% 0% to 0% 100%, #005A94ff 0%, #88BCE2ff 100%);
+		derive(-fx-ribbon-color-base, -30%),
+		derive(-fx-ribbon-color-base, 30%),
+		derive(-fx-ribbon-color-base, 15%),
+		-fx-ribbon-color-base,
+		radial-gradient(center 50% 135%, radius 90%, derive(-fx-ribbon-color-base, 70%) 40%, #FFFFFF00);
 	-fx-background-insets:
 		0px 0px 1px 1px,
+		1px 1px 1px 2px,
+		2px 2px 1px 3px,
+		3px 3px 1px 4px,
 		1px 1px 1px 2px;
 	-fx-background-radius:
-		3px 3px 0px 0px,
-		2px 2px 0px 0px;
+		2px 2px 0px 0px,
+		1px 1px 0px 0px,
+		0px 0px 0px 0px,
+		0px 0px 0px 0px,
+		1px 1px 0px 0px;
 	-fx-border-color: transparent;
 }
 #ribbonAppTab:hover {
 	-fx-background-color:
-		#00346Bff,
-		#88BCE2ff,
-		linear-gradient(from 0% 0% to 0% 100%, #005A94ff 0%, #88BCE2ff 100%);
-	-fx-background-insets:
-		0px 0px 1px 1px,
-		1px 1px 1px 2px,
-		2px 2px 2px 3px;
+		derive(-fx-ribbon-color-base, -30%),
+		derive(-fx-ribbon-color-base, 60%),
+		derive(-fx-ribbon-color-base, 15%),
+		-fx-ribbon-color-base,
+		radial-gradient(center 50% 135%, radius 90%, derive(-fx-ribbon-color-base, 90%) 40%, #FFFFFF00);
 }
 #ribbonAppTab:selected  {
 	-fx-background-color:
-		#00346Bff,
-		linear-gradient(from 0% 0% to 0% 100%, #005A94ff 0%, #88BCE2ff 100%);
-	-fx-background-insets:
-		0px 0px 0px 1px,
-		1px 1px 1px 2px;
-	-fx-border-color: transparent transparent #88BCE2ff transparent;
+		derive(-fx-ribbon-color-base, -30%),
+		derive(-fx-ribbon-color-base, 25%),
+		derive(-fx-ribbon-color-base, 10%),
+		-fx-ribbon-color-base,
+		radial-gradient(center 50% 135%, radius 90%, derive(-fx-ribbon-color-base, 70%) 40%, #FFFFFF00);
+}
+#ribbonAppTab:selected:hover  {
+	-fx-background-color:
+		derive(-fx-ribbon-color-base, -30%),
+		derive(-fx-ribbon-color-base, 25%),
+		derive(-fx-ribbon-color-base, 10%),
+		-fx-ribbon-color-base,
+		radial-gradient(center 50% 135%, radius 90%, derive(-fx-ribbon-color-base, 85%) 40%, #FFFFFF00);
 }
 #ribbonAppTab .tab-label {
 	-fx-text-fill: white;
@@ -79,8 +94,8 @@
 	-fx-border-color: transparent;
 	-fx-border-insets: 0px 0px 0px 4px;
 	-fx-border-radius:
-		3px 3px 0px 0px,
-		2px 2px 0px 0px;
+		2px 2px 0px 0px,
+		1px 1px 0px 0px;
 }
 #ribbonTab:hover {
 	-fx-border-color:

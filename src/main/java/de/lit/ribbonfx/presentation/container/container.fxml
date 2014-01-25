@@ -3,4 +3,4 @@
 <?import java.lang.*?>
 <?import javafx.scene.control.*?>
 
-<TabPane id="ribbonTabPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.lit.ribbonfx.presentation.container.ContainerPresenter" />
+<TabPane id="ribbonTabPane" fx:id="tabPaneRibbon" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="de.lit.ribbonfx.presentation.container.ContainerPresenter" />

@@ -18,6 +18,7 @@ public class RibbonBuilder {
 	Ribbon ribbon;
 	AppTabData appTabData;
 	ObservableList<TabData> tabDataList;
+	Paint accent;
 	Paint contentBackground;
 
 	/**
@@ -42,12 +43,23 @@ public class RibbonBuilder {
 		return this;
 	}
 
-	public RibbonBuilder background(Paint contentBackground) {
+	public RibbonBuilder accent(Paint accent) {
+		this.accent = accent;
+		return this;
+	}
+
+	public RibbonBuilder contentBackground(Paint contentBackground) {
 		this.contentBackground = contentBackground;
 		return this;
 	}
 
 	public Ribbon build() {
+		// Customize Ribbon
+		if (this.accent != null) {
+			this.ribbon.setAccent(this.accent);
+		}
+
+		// App-Tab
 		if (this.appTabData != null) {
 			// Initialize Tab
 			Tab appTab = new Tab();
