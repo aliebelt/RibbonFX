@@ -3,6 +3,7 @@ package de.lit.ribbonfx;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -29,7 +30,8 @@ public class RibbonRunTest extends Application {
 		GroupData groupData22 = RibbonGroupBuilder.create().title("Illustrationen").build();
 		GroupData groupData23 = RibbonGroupBuilder.create().title("Diagramme").build();
 		GroupData groupData24 = RibbonGroupBuilder.create().title("Sparklines").build();
-		SimpleButtonData simpleButtonData251 = RibbonSimpleButtonBuilder.create().text("Datenschn.").build();
+		SimpleButtonData simpleButtonData251 = RibbonSimpleButtonBuilder.create().image(new Image(getClass().getResource("data-cutting.png").toExternalForm()))
+				.text("Datenschn.").build();
 		GroupData groupData25 = RibbonGroupBuilder.create().title("Filter").buttons(simpleButtonData251).build();
 		Label labelTab23 = new Label("Common content of Tab 2 and 3");
 		TabData tab2 = RibbonTabBuilder.create().title("Einfügen").groups(groupData21, groupData22, groupData23, groupData24, groupData25).content(labelTab23)

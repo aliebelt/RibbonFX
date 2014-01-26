@@ -133,6 +133,7 @@ public class RibbonBuilder {
 						SimpleButtonView kSimpleButtonView = new SimpleButtonView();
 						SimpleButtonPresenter kSimpleButtonPresenter = (SimpleButtonPresenter) kSimpleButtonView.getPresenter();
 						// Customize simple-button
+						kSimpleButtonPresenter.setImage(kSimpleButtonData.image().get());
 						kSimpleButtonPresenter.text().bind(kSimpleButtonData.text());
 						// Add simple-button
 						jGroupPresenter.addGroupElement(kSimpleButtonView.getView());

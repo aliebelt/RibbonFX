@@ -3,6 +3,7 @@
 <?import java.lang.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?scenebuilder-stylesheet simplebutton.css?>
 
@@ -12,13 +13,36 @@
       <bottom>
         <BorderPane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="32.0" prefWidth="-1.0" BorderPane.alignment="TOP_CENTER">
           <center>
-            <Label id="simpleButtonText" fx:id="labelSimpleButtonText" text="" BorderPane.alignment="TOP_CENTER" />
+            <AnchorPane prefHeight="-1.0" prefWidth="-1.0" BorderPane.alignment="TOP_CENTER">
+              <children>
+                <BorderPane prefHeight="-1.0" prefWidth="-1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <center>
+                    <Label id="simpleButtonText" fx:id="labelSimpleButtonTextFirstLine" text="" BorderPane.alignment="TOP_CENTER" />
+                  </center>
+                </BorderPane>
+                <BorderPane prefHeight="-1.0" prefWidth="-1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="13.0">
+                  <center>
+                    <Label id="simpleButtonText" fx:id="labelSimpleButtonTextSecondLine" text="" BorderPane.alignment="TOP_CENTER" />
+                  </center>
+                </BorderPane>
+              </children>
+            </AnchorPane>
           </center>
+          <padding>
+            <Insets top="2.0" />
+          </padding>
         </BorderPane>
       </bottom>
+      <center>
+        <BorderPane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="32.0" prefWidth="-1.0">
+          <center>
+            <ImageView id="imageViewSimpleButtonIcon" fx:id="imageViewSimpleButtonSymbol" fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
+          </center>
+        </BorderPane>
+      </center>
     </BorderPane>
   </children>
   <padding>
-    <Insets left="2.0" right="3.0" />
+    <Insets left="2.0" right="3.0" top="3.0" />
   </padding>
 </AnchorPane>
