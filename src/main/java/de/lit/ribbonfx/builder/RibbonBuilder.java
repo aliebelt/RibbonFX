@@ -1,10 +1,14 @@
-package de.lit.ribbonfx;
+package de.lit.ribbonfx.builder;
 
 import javafx.beans.Observable;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.Tab;
 import javafx.scene.paint.Paint;
+import de.lit.ribbonfx.Ribbon;
+import de.lit.ribbonfx.model.AppTabData;
+import de.lit.ribbonfx.model.GroupData;
+import de.lit.ribbonfx.model.TabData;
 import de.lit.ribbonfx.presentation.group.GroupPresenter;
 import de.lit.ribbonfx.presentation.group.GroupView;
 import de.lit.ribbonfx.presentation.tabcontent.TabContentPresenter;

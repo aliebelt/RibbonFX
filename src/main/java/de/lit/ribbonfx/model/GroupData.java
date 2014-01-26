@@ -1,4 +1,4 @@
-package de.lit.ribbonfx;
+package de.lit.ribbonfx.model;
 
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
@@ -10,7 +10,7 @@ public class GroupData {
 	/**
 	 * Hidden constructor
 	 */
-	GroupData() {
+	public GroupData() {
 		this.title = new SimpleStringProperty("unnamed");
 	}
 

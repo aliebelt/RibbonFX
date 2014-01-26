@@ -1,5 +1,6 @@
-package de.lit.ribbonfx;
+package de.lit.ribbonfx.builder;
 
+import de.lit.ribbonfx.model.AbstractTabData;
 import javafx.scene.Node;
 
 /**

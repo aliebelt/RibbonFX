@@ -1,4 +1,4 @@
-package de.lit.ribbonfx;
+package de.lit.ribbonfx.actions;
 
 /**
  * Marker interface for Ribbon-actions.

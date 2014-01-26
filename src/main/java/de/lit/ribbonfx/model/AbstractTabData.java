@@ -1,4 +1,4 @@
-package de.lit.ribbonfx;
+package de.lit.ribbonfx.model;
 
 import javafx.beans.property.BooleanProperty;
 import javafx.beans.property.ObjectProperty;
@@ -8,7 +8,7 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 import javafx.scene.Node;
 
-abstract class AbstractTabData {
+public abstract class AbstractTabData {
 
 	StringProperty title;
 	BooleanProperty disabled;

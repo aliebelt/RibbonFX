@@ -1,11 +1,11 @@
-package de.lit.ribbonfx;
+package de.lit.ribbonfx.model;
 
 public class AppTabData extends AbstractTabData {
 
 	/**
 	 * Hidden constructor
 	 */
-	AppTabData() {
+	public AppTabData() {
 		// Empty
 	}
 

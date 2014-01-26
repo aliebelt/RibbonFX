@@ -1,4 +1,4 @@
-package de.lit.ribbonfx;
+package de.lit.ribbonfx.model;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -10,7 +10,7 @@ public class TabData extends AbstractTabData {
 	/**
 	 * Hidden constructor
 	 */
-	TabData() {
+	public TabData() {
 		this.groupDataList = FXCollections.observableArrayList();
 	}
 

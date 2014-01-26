@@ -16,7 +16,7 @@ public class Ribbon extends Region {
 	/**
 	 * Hidden constructor
 	 */
-	Ribbon() {
+	public Ribbon() {
 		setBackground(new Background((BackgroundFill) null));
 		ContainerView tabPaneView = new ContainerView();
 		this.tabPane = (TabPane) tabPaneView.getView();
@@ -27,11 +27,11 @@ public class Ribbon extends Region {
 		this.tabPane.prefHeightProperty().bind(heightProperty());
 	}
 
-	void setAccent(Paint accent) {
+	public void setAccent(Paint accent) {
 		this.tabPanePresenter.setAccent(accent);
 	}
 
-	TabPane getTabPane() {
+	public TabPane getTabPane() {
 		return this.tabPane;
 	}
 

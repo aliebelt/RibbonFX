@@ -1,4 +1,7 @@
-package de.lit.ribbonfx;
+package de.lit.ribbonfx.builder;
+
+import de.lit.ribbonfx.model.GroupData;
+import de.lit.ribbonfx.model.TabData;
 
 /**
  * @author aliebelt
