@@ -1,5 +1,6 @@
 package de.lit.ribbonfx.builder;
 
+import de.lit.ribbonfx.model.ButtonData;
 import de.lit.ribbonfx.model.GroupData;
 
 /**
@@ -22,6 +23,11 @@ public class RibbonGroupBuilder {
 
 	public RibbonGroupBuilder title(String title) {
 		this.groupData.title().set(title);
+		return this;
+	}
+
+	public RibbonGroupBuilder buttons(ButtonData... buttons) {
+		this.groupData.buttonDataList().addAll(buttons);
 		return this;
 	}
 

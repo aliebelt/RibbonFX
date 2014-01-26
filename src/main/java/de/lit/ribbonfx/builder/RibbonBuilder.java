@@ -7,10 +7,14 @@ import javafx.scene.control.Tab;
 import javafx.scene.paint.Paint;
 import de.lit.ribbonfx.Ribbon;
 import de.lit.ribbonfx.model.AppTabData;
+import de.lit.ribbonfx.model.ButtonData;
 import de.lit.ribbonfx.model.GroupData;
+import de.lit.ribbonfx.model.SimpleButtonData;
 import de.lit.ribbonfx.model.TabData;
 import de.lit.ribbonfx.presentation.group.GroupPresenter;
 import de.lit.ribbonfx.presentation.group.GroupView;
+import de.lit.ribbonfx.presentation.simplebutton.SimpleButtonPresenter;
+import de.lit.ribbonfx.presentation.simplebutton.SimpleButtonView;
 import de.lit.ribbonfx.presentation.tabcontent.TabContentPresenter;
 import de.lit.ribbonfx.presentation.tabcontent.TabContentView;
 
@@ -112,6 +116,7 @@ public class RibbonBuilder {
 				this.ribbon.getTabPane().getSelectionModel().select(iTab);
 				noTabIsSelected = false;
 			}
+			// Add ribbon-groups to tab
 			for (GroupData jGroupData : iTabData.groupDataList()) {
 				// Initialize Group
 				GroupView jGroupView = new GroupView();
@@ -120,6 +125,19 @@ public class RibbonBuilder {
 				jGroupPresenter.title().bind(jGroupData.title());
 				// Add Group
 				iTabContentPresenter.addGroup(jGroupView.getView());
+				// Add ribbon-buttons to group
+				for (ButtonData kButtonData : jGroupData.buttonDataList()) {
+					if (kButtonData instanceof SimpleButtonData) {
+						SimpleButtonData kSimpleButtonData = (SimpleButtonData) kButtonData;
+						// Initialize simple-button
+						SimpleButtonView kSimpleButtonView = new SimpleButtonView();
+						SimpleButtonPresenter kSimpleButtonPresenter = (SimpleButtonPresenter) kSimpleButtonView.getPresenter();
+						// Customize simple-button
+						kSimpleButtonPresenter.text().bind(kSimpleButtonData.text());
+						// Add simple-button
+						jGroupPresenter.addGroupElement(kSimpleButtonView.getView());
+					}
+				}
 			}
 		}
 		return this.ribbon;

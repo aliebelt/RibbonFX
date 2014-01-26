@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?scenebuilder-stylesheet simplebutton.css?>
+
+<AnchorPane id="simpleButton" maxHeight="-Infinity" minHeight="-Infinity" onMouseClicked="#clicked" prefHeight="66.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="de.lit.ribbonfx.presentation.simplebutton.SimpleButtonPresenter">
+  <children>
+    <BorderPane prefHeight="-1.0" prefWidth="-1.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <bottom>
+        <BorderPane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="31.0" prefWidth="-1.0" BorderPane.alignment="TOP_CENTER">
+          <center>
+            <Label id="simpleButtonText" fx:id="labelSimpleButtonText" text="" BorderPane.alignment="TOP_CENTER" />
+          </center>
+        </BorderPane>
+      </bottom>
+    </BorderPane>
+  </children>
+</AnchorPane>

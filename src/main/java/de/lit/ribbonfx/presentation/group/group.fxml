@@ -16,6 +16,9 @@
               </bottom>
             </BorderPane>
           </bottom>
+          <center>
+            <HBox fx:id="hBoxGroupElements" prefHeight="-1.0" prefWidth="-1.0" />
+          </center>
         </BorderPane>
         <Separator id="groupSeparator" orientation="VERTICAL" prefHeight="-1.0" />
       </children>
