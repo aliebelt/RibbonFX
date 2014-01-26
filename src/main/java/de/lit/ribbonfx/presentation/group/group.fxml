@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.lang.*?>
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
@@ -17,8 +18,11 @@
             </BorderPane>
           </bottom>
           <center>
-            <HBox fx:id="hBoxGroupElements" prefHeight="-1.0" prefWidth="-1.0" />
+            <HBox fx:id="hBoxGroupElements" prefHeight="-1.0" prefWidth="-1.0" BorderPane.alignment="TOP_CENTER" />
           </center>
+          <padding>
+            <Insets top="2.0" />
+          </padding>
         </BorderPane>
         <Separator id="groupSeparator" orientation="VERTICAL" prefHeight="-1.0" />
       </children>
