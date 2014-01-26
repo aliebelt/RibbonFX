@@ -6,7 +6,7 @@
 	-fx-background-color:
 		linear-gradient(from 0% 0% to 0% 100%, #F1CA58ff, #F6D74Aff),
 		#FFFFFFeb,
-		linear-gradient(from 0% 0% to 0% 100%, #FDEEB3ff, #FDE388ff 15%);
+		linear-gradient(from 0% 0% to 0% 100%, #FDEEB3ff, #FDE388ff 15%, #FCE68Dff 87%, #FDFAE0ff 100%);
 	-fx-background-insets:
 		0px,
 		1px,
