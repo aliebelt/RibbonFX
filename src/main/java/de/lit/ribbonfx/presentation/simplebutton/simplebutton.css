@@ -19,8 +19,8 @@
 #simpleButton:pressed {
 	-fx-background-color:
 		linear-gradient(from 0% 0% to 0% 100%, #C2762Bff, #C29E47ff),
-		#FFFFFFeb,
-		linear-gradient(from 0% 0% to 0% 100%, #FDEEB3ff, #FDE388ff 15%);
+		linear-gradient(from 0% 0% to 0% 100%, #F6C867ff, #FAD77Aff),
+		#FFE48Aff;
 	-fx-background-insets:
 		0px,
 		1px,
