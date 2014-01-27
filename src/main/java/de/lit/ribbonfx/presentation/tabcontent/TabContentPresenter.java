@@ -48,6 +48,11 @@ public class TabContentPresenter implements Initializable {
 		// Tab-Content
 		if (isSelected && content != null) {
 			this.ribbonTabContentContainer.getChildren().setAll(this.content);
+			AnchorPane.clearConstraints(this.content);
+			AnchorPane.setBottomAnchor(this.content, 0.0);
+			AnchorPane.setLeftAnchor(this.content, 0.0);
+			AnchorPane.setRightAnchor(this.content, 0.0);
+			AnchorPane.setTopAnchor(this.content, 0.0);
 		} else {
 			this.ribbonTabContentContainer.getChildren().clear();
 		}
