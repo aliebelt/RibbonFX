@@ -5,8 +5,10 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.Parent;
 import javafx.scene.control.Tab;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Paint;
 import de.lit.ribbonfx.Ribbon;
+import de.lit.ribbonfx.actions.ButtonAction;
 import de.lit.ribbonfx.model.AppTabData;
 import de.lit.ribbonfx.model.ButtonData;
 import de.lit.ribbonfx.model.GroupData;
@@ -138,6 +140,7 @@ public class RibbonBuilder {
 						kSimpleButtonPresenter.setImage(kSimpleButtonData.image().get());
 						kSimpleButtonPresenter.text().bind(kSimpleButtonData.text());
 						kSimpleButton.disableProperty().bind(kSimpleButtonData.disabled());
+						kSimpleButton.setOnMouseClicked((MouseEvent e) -> this.ribbon.fire(new ButtonAction(kSimpleButtonData)));
 						// Add simple-button
 						jGroupPresenter.addGroupElement(kSimpleButton);
 					}

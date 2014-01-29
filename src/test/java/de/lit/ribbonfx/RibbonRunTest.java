@@ -1,12 +1,15 @@
 package de.lit.ribbonfx;
 
 import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import de.lit.ribbonfx.actions.ButtonAction;
 import de.lit.ribbonfx.builder.RibbonAppTabBuilder;
 import de.lit.ribbonfx.builder.RibbonBuilder;
 import de.lit.ribbonfx.builder.RibbonGroupBuilder;
@@ -37,6 +40,17 @@ public class RibbonRunTest extends Application {
 				.build();
 		TabData tab3 = RibbonTabBuilder.create().title("Seitenlayout").content(labelTab23).build();
 		Ribbon ribbon = RibbonBuilder.create().appTab(appTab).tabs(tab1, tab2, tab3).build();
+
+		ribbon.setOnAction(new EventHandler<ActionEvent>() {
+			@Override
+			public void handle(ActionEvent event) {
+				ButtonAction buttonAction = (ButtonAction) event;
+				if (simpleButtonData251.equals(buttonAction.getButtonData())) {
+					System.out.println("Button \"" + simpleButtonData251.text().get() + "\" fired..");
+				}
+			}
+		});
+
 		primaryStage.setScene(new Scene(ribbon, 650, 350, Color.TRANSPARENT));
 		primaryStage.initStyle(StageStyle.UNIFIED);
 		primaryStage.show();
