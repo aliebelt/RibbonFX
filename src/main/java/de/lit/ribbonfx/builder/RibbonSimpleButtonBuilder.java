@@ -31,6 +31,11 @@ public class RibbonSimpleButtonBuilder {
 		return this;
 	}
 
+	public RibbonSimpleButtonBuilder disabled(boolean disabled) {
+		this.simpleButtonData.disabled().set(disabled);
+		return this;
+	}
+
 	public SimpleButtonData build() {
 		return this.simpleButtonData;
 	}

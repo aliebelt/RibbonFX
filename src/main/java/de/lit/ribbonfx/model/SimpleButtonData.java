@@ -1,6 +1,8 @@
 package de.lit.ribbonfx.model;
 
+import javafx.beans.property.BooleanProperty;
 import javafx.beans.property.ObjectProperty;
+import javafx.beans.property.SimpleBooleanProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
@@ -10,6 +12,7 @@ public class SimpleButtonData implements ButtonData {
 
 	ObjectProperty<Image> image;
 	StringProperty text;
+	BooleanProperty disabled;
 
 	/**
 	 * Hidden constructor
@@ -17,6 +20,7 @@ public class SimpleButtonData implements ButtonData {
 	public SimpleButtonData() {
 		this.image = new SimpleObjectProperty<Image>();
 		this.text = new SimpleStringProperty("unnamed");
+		this.disabled = new SimpleBooleanProperty(false);
 	}
 
 	public ObjectProperty<Image> image() {
@@ -25,6 +29,10 @@ public class SimpleButtonData implements ButtonData {
 
 	public StringProperty text() {
 		return this.text;
+	}
+
+	public BooleanProperty disabled() {
+		return this.disabled;
 	}
 
 }

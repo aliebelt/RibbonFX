@@ -3,6 +3,7 @@ package de.lit.ribbonfx.builder;
 import javafx.beans.Observable;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.scene.Parent;
 import javafx.scene.control.Tab;
 import javafx.scene.paint.Paint;
 import de.lit.ribbonfx.Ribbon;
@@ -132,11 +133,13 @@ public class RibbonBuilder {
 						// Initialize simple-button
 						SimpleButtonView kSimpleButtonView = new SimpleButtonView();
 						SimpleButtonPresenter kSimpleButtonPresenter = (SimpleButtonPresenter) kSimpleButtonView.getPresenter();
+						Parent kSimpleButton = kSimpleButtonView.getView();
 						// Customize simple-button
 						kSimpleButtonPresenter.setImage(kSimpleButtonData.image().get());
 						kSimpleButtonPresenter.text().bind(kSimpleButtonData.text());
+						kSimpleButton.disableProperty().bind(kSimpleButtonData.disabled());
 						// Add simple-button
-						jGroupPresenter.addGroupElement(kSimpleButtonView.getView());
+						jGroupPresenter.addGroupElement(kSimpleButton);
 					}
 				}
 			}
