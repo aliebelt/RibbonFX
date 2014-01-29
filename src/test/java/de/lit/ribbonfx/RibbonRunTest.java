@@ -9,6 +9,9 @@ import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+
+import org.controlsfx.dialog.Dialogs;
+
 import de.lit.ribbonfx.actions.ButtonAction;
 import de.lit.ribbonfx.builder.RibbonAppTabBuilder;
 import de.lit.ribbonfx.builder.RibbonBuilder;
@@ -46,7 +49,7 @@ public class RibbonRunTest extends Application {
 			public void handle(ActionEvent event) {
 				ButtonAction buttonAction = (ButtonAction) event;
 				if (simpleButtonData251.equals(buttonAction.getButtonData())) {
-					System.out.println("Button \"" + simpleButtonData251.text().get() + "\" fired..");
+					Dialogs.create().title("ButtonAction").message("Button \"" + simpleButtonData251.text().get() + "\" fired...").showInformation();
 				}
 			}
 		});
