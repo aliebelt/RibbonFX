@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>de.lit</groupId>
 	<artifactId>ribbonfx</artifactId>
-	<version>1.1.1</version>
+	<version>1.2-SNAPSHOT</version>
 	<name>RibbonFX</name>
 
 	<build>
@@ -41,7 +41,7 @@
 		<connection>scm:git:git@github.com:aliebelt/RibbonFX.git</connection>
 		<url>scm:git:git@github.com:aliebelt/RibbonFX.git</url>
 		<developerConnection>scm:git:git@github.com:aliebelt/RibbonFX.git</developerConnection>
-		<tag>v1.1.1</tag>
+		<tag>HEAD</tag>
 	</scm>
 
 	<dependencies>
