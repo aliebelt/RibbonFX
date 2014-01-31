@@ -11,9 +11,12 @@ import de.lit.ribbonfx.Ribbon;
 import de.lit.ribbonfx.actions.ButtonAction;
 import de.lit.ribbonfx.model.AppTabData;
 import de.lit.ribbonfx.model.ButtonData;
+import de.lit.ribbonfx.model.FooterData;
 import de.lit.ribbonfx.model.GroupData;
 import de.lit.ribbonfx.model.SimpleButtonData;
 import de.lit.ribbonfx.model.TabData;
+import de.lit.ribbonfx.presentation.footer.FooterPresenter;
+import de.lit.ribbonfx.presentation.footer.FooterView;
 import de.lit.ribbonfx.presentation.group.GroupPresenter;
 import de.lit.ribbonfx.presentation.group.GroupView;
 import de.lit.ribbonfx.presentation.simplebutton.SimpleButtonPresenter;
@@ -69,7 +72,6 @@ public class RibbonBuilder {
 		if (this.accent != null) {
 			this.ribbon.setAccent(this.accent);
 		}
-
 		// App-Tab
 		if (this.appTabData != null) {
 			// Initialize Tab
@@ -79,7 +81,7 @@ public class RibbonBuilder {
 			TabContentView appTabContentView = new TabContentView();
 			TabContentPresenter appTabContentPresenter = (TabContentPresenter) appTabContentView.getPresenter();
 			appTab.setContent(appTabContentView.getView());
-			// Customize Tag
+			// Customize Tab
 			appTab.textProperty().bind(this.appTabData.title());
 			appTab.disableProperty().bind(this.appTabData.disabled());
 			appTabContentPresenter.setContent(this.appTabData.content().get());
@@ -89,6 +91,13 @@ public class RibbonBuilder {
 			}
 			if (this.accent != null) {
 				appTabContentPresenter.setAccent(this.accent);
+			}
+			if (this.appTabData.footer().get() != null) {
+				FooterData footerData = this.appTabData.footer().get();
+				FooterView footerView = new FooterView();
+				FooterPresenter footerPresenter = (FooterPresenter) footerView.getPresenter();
+				// TODO add buttons to footer
+				appTabContentPresenter.setFooter(footerView.getView());
 			}
 			// Add Tab
 			this.ribbon.getTabPane().getTabs().add(appTab);
@@ -102,7 +111,7 @@ public class RibbonBuilder {
 			TabContentView iTabContentView = new TabContentView();
 			TabContentPresenter iTabContentPresenter = (TabContentPresenter) iTabContentView.getPresenter();
 			iTab.setContent(iTabContentView.getView());
-			// Customize Tag
+			// Customize Tab
 			iTab.textProperty().bind(iTabData.title());
 			iTab.disableProperty().bind(iTabData.disabled());
 			iTabContentPresenter.setContent(iTabData.content().get());
@@ -112,6 +121,13 @@ public class RibbonBuilder {
 			}
 			if (this.accent != null) {
 				iTabContentPresenter.setAccent(this.accent);
+			}
+			if (iTabData.footer().get() != null) {
+				FooterData iFooterData = iTabData.footer().get();
+				FooterView iFooterView = new FooterView();
+				FooterPresenter iFooterPresenter = (FooterPresenter) iFooterView.getPresenter();
+				// TODO add buttons to footer
+				iTabContentPresenter.setFooter(iFooterView.getView());
 			}
 			// Add Tab
 			this.ribbon.getTabPane().getTabs().add(iTab);

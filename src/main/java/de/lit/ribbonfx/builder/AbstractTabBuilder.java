@@ -1,7 +1,8 @@
 package de.lit.ribbonfx.builder;
 
-import de.lit.ribbonfx.model.AbstractTabData;
 import javafx.scene.Node;
+import de.lit.ribbonfx.model.AbstractTabData;
+import de.lit.ribbonfx.model.FooterData;
 
 /**
  * @author aliebelt
@@ -25,6 +26,12 @@ public abstract class AbstractTabBuilder<T> {
 	@SuppressWarnings("unchecked")
 	public T content(Node content) {
 		this.tabData.content().set(content);
+		return (T) this;
+	}
+
+	@SuppressWarnings("unchecked")
+	public T footer(FooterData footer) {
+		this.tabData.footer().set(footer);
 		return (T) this;
 	}
 

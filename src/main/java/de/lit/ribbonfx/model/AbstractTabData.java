@@ -13,11 +13,13 @@ public abstract class AbstractTabData {
 	StringProperty title;
 	BooleanProperty disabled;
 	ObjectProperty<Node> content;
+	ObjectProperty<FooterData> footer;
 
 	public AbstractTabData() {
 		this.title = new SimpleStringProperty("unnamed");
 		this.disabled = new SimpleBooleanProperty(false);
 		this.content = new SimpleObjectProperty<Node>();
+		this.footer = new SimpleObjectProperty<FooterData>();
 	}
 
 	public StringProperty title() {
@@ -30,6 +32,10 @@ public abstract class AbstractTabData {
 
 	public ObjectProperty<Node> content() {
 		return this.content;
+	}
+
+	public ObjectProperty<FooterData> footer() {
+		return this.footer;
 	}
 
 }

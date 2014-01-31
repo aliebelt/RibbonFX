@@ -15,10 +15,12 @@ import org.controlsfx.dialog.Dialogs;
 import de.lit.ribbonfx.actions.ButtonAction;
 import de.lit.ribbonfx.builder.RibbonAppTabBuilder;
 import de.lit.ribbonfx.builder.RibbonBuilder;
+import de.lit.ribbonfx.builder.RibbonFooterBuilder;
 import de.lit.ribbonfx.builder.RibbonGroupBuilder;
 import de.lit.ribbonfx.builder.RibbonSimpleButtonBuilder;
 import de.lit.ribbonfx.builder.RibbonTabBuilder;
 import de.lit.ribbonfx.model.AppTabData;
+import de.lit.ribbonfx.model.FooterData;
 import de.lit.ribbonfx.model.GroupData;
 import de.lit.ribbonfx.model.SimpleButtonData;
 import de.lit.ribbonfx.model.TabData;
@@ -31,7 +33,8 @@ public class RibbonRunTest extends Application {
 		GroupData groupData11 = RibbonGroupBuilder.create().title("Zwischenablage").build();
 		GroupData groupData12 = RibbonGroupBuilder.create().title("Schriftart").build();
 		Label labelTab1 = new Label("Content of Tab 1");
-		TabData tab1 = RibbonTabBuilder.create().title("Start").groups(groupData11, groupData12).content(labelTab1).build();
+		FooterData footer = RibbonFooterBuilder.create().build();
+		TabData tab1 = RibbonTabBuilder.create().title("Start").groups(groupData11, groupData12).content(labelTab1).footer(footer).build();
 		GroupData groupData21 = RibbonGroupBuilder.create().title("Tabellen").build();
 		GroupData groupData22 = RibbonGroupBuilder.create().title("Illustrationen").build();
 		GroupData groupData23 = RibbonGroupBuilder.create().title("Diagramme").build();
@@ -40,8 +43,8 @@ public class RibbonRunTest extends Application {
 		GroupData groupData25 = RibbonGroupBuilder.create().title("Filter").buttons(simpleButtonData251).build();
 		Label labelTab23 = new Label("Common content of Tab 2 and 3");
 		TabData tab2 = RibbonTabBuilder.create().title("Einfügen").groups(groupData21, groupData22, groupData23, groupData24, groupData25).content(labelTab23)
-				.build();
-		TabData tab3 = RibbonTabBuilder.create().title("Seitenlayout").content(labelTab23).build();
+				.footer(footer).build();
+		TabData tab3 = RibbonTabBuilder.create().title("Seitenlayout").content(labelTab23).footer(footer).build();
 		Ribbon ribbon = RibbonBuilder.create().appTab(appTab).tabs(tab1, tab2, tab3).build();
 
 		ribbon.setOnAction(new EventHandler<ActionEvent>() {
