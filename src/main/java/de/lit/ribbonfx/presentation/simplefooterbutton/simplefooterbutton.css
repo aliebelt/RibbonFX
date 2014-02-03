@@ -1,0 +1,51 @@
+
+#simpleButton {
+	-fx-background-color: transparent;
+}
+#simpleButton:hover {
+	-fx-background-color:
+		linear-gradient(from 0% 0% to 0% 100%, #F1CA58ff, #F6D74Aff),
+		#FFFFFFeb,
+		linear-gradient(from 0% 0% to 0% 100%, #FDEEB3ff, #FDE388ff 15%, #FCE68Dff 87%, #FDFAE0ff 100%);
+	-fx-background-insets:
+		0px,
+		1px,
+		2px;
+	-fx-background-radius:
+		3px,
+		3px,
+		3px;
+}
+#simpleButton:pressed {
+	-fx-background-color:
+		linear-gradient(from 0% 0% to 0% 100%, #C2762Bff, #C29E47ff),
+		linear-gradient(from 0% 0% to 0% 100%, #F6C867ff, #FAD77Aff),
+		#FFE48Aff;
+	-fx-background-insets:
+		0px,
+		1px,
+		2px;
+	-fx-background-radius:
+		3px,
+		3px,
+		3px;
+}
+
+#simpleButtonText {
+	-fx-font-size: 11px;
+}
+
+#buttonSeparator {
+	-fx-padding: 0px;
+}
+#buttonSeparator .line {
+	-fx-border-color:
+		linear-gradient(from 0% 0% to 0% 100%, #EAEDF1ff 0%, #E6E9ECff 30%, #DDE0E3ff 60%, #C5C8CDff 100%),
+		linear-gradient(from 0% 0% to 0% 100%, #C1C5C9ff 0%, #76797Dff 50%, #76797Dff 60%, #ACAFB3ff 100%);
+	-fx-border-width:
+		1px,
+		0px 1px 0px 0px;
+	-fx-border-insets:
+		0px,
+		0px 1px 0px 1px;
+}

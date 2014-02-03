@@ -6,20 +6,20 @@ import de.lit.ribbonfx.model.TabData;
 /**
  * @author aliebelt
  */
-public class RibbonTabBuilder extends AbstractTabBuilder<RibbonTabBuilder> {
+public class TabBuilder extends AbstractTabBuilder<TabBuilder> {
 
 	/**
 	 * Hidden constructor
 	 */
-	RibbonTabBuilder() {
+	TabBuilder() {
 		super.tabData = new TabData();
 	}
 
-	public static RibbonTabBuilder create() {
-		return new RibbonTabBuilder();
+	public static TabBuilder create() {
+		return new TabBuilder();
 	}
 
-	public RibbonTabBuilder groups(GroupData... groups) {
+	public TabBuilder groups(GroupData... groups) {
 		getTabData().groupDataList().addAll(groups);
 		return this;
 	}

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.lit.ribbonfx.presentation.simplefooterbutton.SimpleFooterButtonPresenter">
+<children><Separator id="buttonSeparator" fx:id="separatorLeft" maxWidth="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefWidth="0.0" visible="false" /><AnchorPane id="simpleButton" maxHeight="-Infinity" minHeight="-Infinity" onMouseClicked="#clicked" prefHeight="19.0" HBox.hgrow="NEVER" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<children>
+<HBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="0.0">
+<children>
+<BorderPane>
+<center>
+<ImageView fx:id="imageViewSimpleButtonSymbol" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
+</center>
+</BorderPane>
+<BorderPane>
+<left>
+<Label id="simpleButtonText" fx:id="labelSimpleButtonText" BorderPane.alignment="CENTER_LEFT" />
+</left>
+</BorderPane>
+</children>
+</HBox>
+</children>
+<HBox.margin>
+<Insets bottom="1.0" />
+</HBox.margin>
+</AnchorPane><Separator id="buttonSeparator" fx:id="separatorRight" maxWidth="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefWidth="3.0" />
+</children></HBox>

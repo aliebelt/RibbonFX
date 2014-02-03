@@ -11,9 +11,11 @@ import de.lit.ribbonfx.Ribbon;
 import de.lit.ribbonfx.actions.ButtonAction;
 import de.lit.ribbonfx.model.AppTabData;
 import de.lit.ribbonfx.model.ButtonData;
+import de.lit.ribbonfx.model.FooterButtonData;
 import de.lit.ribbonfx.model.FooterData;
 import de.lit.ribbonfx.model.GroupData;
 import de.lit.ribbonfx.model.SimpleButtonData;
+import de.lit.ribbonfx.model.SimpleFooterButtonData;
 import de.lit.ribbonfx.model.TabData;
 import de.lit.ribbonfx.presentation.footer.FooterPresenter;
 import de.lit.ribbonfx.presentation.footer.FooterView;
@@ -21,6 +23,8 @@ import de.lit.ribbonfx.presentation.group.GroupPresenter;
 import de.lit.ribbonfx.presentation.group.GroupView;
 import de.lit.ribbonfx.presentation.simplebutton.SimpleButtonPresenter;
 import de.lit.ribbonfx.presentation.simplebutton.SimpleButtonView;
+import de.lit.ribbonfx.presentation.simplefooterbutton.SimpleFooterButtonPresenter;
+import de.lit.ribbonfx.presentation.simplefooterbutton.SimpleFooterButtonView;
 import de.lit.ribbonfx.presentation.tabcontent.TabContentPresenter;
 import de.lit.ribbonfx.presentation.tabcontent.TabContentView;
 
@@ -96,7 +100,40 @@ public class RibbonBuilder {
 				FooterData footerData = this.appTabData.footer().get();
 				FooterView footerView = new FooterView();
 				FooterPresenter footerPresenter = (FooterPresenter) footerView.getPresenter();
-				// TODO add buttons to footer
+				for (FooterButtonData iFooterButton : footerData.footerLeftButtonDataList()) {
+					if (iFooterButton instanceof SimpleFooterButtonData) {
+						SimpleFooterButtonData iSimpleFooterButtonData = (SimpleFooterButtonData) iFooterButton;
+						// Initialize simple-footer-button
+						SimpleFooterButtonView iSimpleFooterButtonView = new SimpleFooterButtonView();
+						SimpleFooterButtonPresenter iSimpleFooterButtonPresenter = (SimpleFooterButtonPresenter) iSimpleFooterButtonView.getPresenter();
+						Parent iSimpleFooterButton = iSimpleFooterButtonView.getView();
+						// Customize simple-footer-button
+						iSimpleFooterButtonPresenter.setLeft(true);
+						iSimpleFooterButtonPresenter.setImage(iSimpleFooterButtonData.image().get());
+						iSimpleFooterButtonPresenter.text().bind(iSimpleFooterButtonData.text());
+						iSimpleFooterButton.disableProperty().bind(iSimpleFooterButtonData.disabled());
+						iSimpleFooterButton.setOnMouseClicked((MouseEvent e) -> this.ribbon.fire(new ButtonAction(iSimpleFooterButtonData)));
+						// Add simple-footer-button
+						footerPresenter.addLeftButton(iSimpleFooterButton);
+					}
+				}
+				for (FooterButtonData iFooterButton : footerData.footerRightButtonDataList()) {
+					if (iFooterButton instanceof SimpleFooterButtonData) {
+						SimpleFooterButtonData iSimpleFooterButtonData = (SimpleFooterButtonData) iFooterButton;
+						// Initialize simple-footer-button
+						SimpleFooterButtonView iSimpleFooterButtonView = new SimpleFooterButtonView();
+						SimpleFooterButtonPresenter iSimpleFooterButtonPresenter = (SimpleFooterButtonPresenter) iSimpleFooterButtonView.getPresenter();
+						Parent iSimpleFooterButton = iSimpleFooterButtonView.getView();
+						// Customize simple-footer-button
+						iSimpleFooterButtonPresenter.setLeft(false);
+						iSimpleFooterButtonPresenter.setImage(iSimpleFooterButtonData.image().get());
+						iSimpleFooterButtonPresenter.text().bind(iSimpleFooterButtonData.text());
+						iSimpleFooterButton.disableProperty().bind(iSimpleFooterButtonData.disabled());
+						iSimpleFooterButton.setOnMouseClicked((MouseEvent e) -> this.ribbon.fire(new ButtonAction(iSimpleFooterButtonData)));
+						// Add simple-footer-button
+						footerPresenter.addRightButton(iSimpleFooterButton);
+					}
+				}
 				appTabContentPresenter.setFooter(footerView.getView());
 			}
 			// Add Tab
@@ -126,7 +163,40 @@ public class RibbonBuilder {
 				FooterData iFooterData = iTabData.footer().get();
 				FooterView iFooterView = new FooterView();
 				FooterPresenter iFooterPresenter = (FooterPresenter) iFooterView.getPresenter();
-				// TODO add buttons to footer
+				for (FooterButtonData kFooterButton : iFooterData.footerLeftButtonDataList()) {
+					if (kFooterButton instanceof SimpleFooterButtonData) {
+						SimpleFooterButtonData kSimpleFooterButtonData = (SimpleFooterButtonData) kFooterButton;
+						// Initialize simple-footer-button
+						SimpleFooterButtonView kSimpleFooterButtonView = new SimpleFooterButtonView();
+						SimpleFooterButtonPresenter kSimpleFooterButtonPresenter = (SimpleFooterButtonPresenter) kSimpleFooterButtonView.getPresenter();
+						Parent kSimpleFooterButton = kSimpleFooterButtonView.getView();
+						// Customize simple-footer-button
+						kSimpleFooterButtonPresenter.setLeft(true);
+						kSimpleFooterButtonPresenter.setImage(kSimpleFooterButtonData.image().get());
+						kSimpleFooterButtonPresenter.text().bind(kSimpleFooterButtonData.text());
+						kSimpleFooterButton.disableProperty().bind(kSimpleFooterButtonData.disabled());
+						kSimpleFooterButton.setOnMouseClicked((MouseEvent e) -> this.ribbon.fire(new ButtonAction(kSimpleFooterButtonData)));
+						// Add simple-footer-button
+						iFooterPresenter.addLeftButton(kSimpleFooterButton);
+					}
+				}
+				for (FooterButtonData kFooterButton : iFooterData.footerRightButtonDataList()) {
+					if (kFooterButton instanceof SimpleFooterButtonData) {
+						SimpleFooterButtonData kSimpleFooterButtonData = (SimpleFooterButtonData) kFooterButton;
+						// Initialize simple-footer-button
+						SimpleFooterButtonView kSimpleFooterButtonView = new SimpleFooterButtonView();
+						SimpleFooterButtonPresenter kSimpleFooterButtonPresenter = (SimpleFooterButtonPresenter) kSimpleFooterButtonView.getPresenter();
+						Parent kSimpleFooterButton = kSimpleFooterButtonView.getView();
+						// Customize simple-footer-button
+						kSimpleFooterButtonPresenter.setLeft(false);
+						kSimpleFooterButtonPresenter.setImage(kSimpleFooterButtonData.image().get());
+						kSimpleFooterButtonPresenter.text().bind(kSimpleFooterButtonData.text());
+						kSimpleFooterButton.disableProperty().bind(kSimpleFooterButtonData.disabled());
+						kSimpleFooterButton.setOnMouseClicked((MouseEvent e) -> this.ribbon.fire(new ButtonAction(kSimpleFooterButtonData)));
+						// Add simple-footer-button
+						iFooterPresenter.addRightButton(kSimpleFooterButton);
+					}
+				}
 				iTabContentPresenter.setFooter(iFooterView.getView());
 			}
 			// Add Tab

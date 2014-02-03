@@ -6,17 +6,17 @@ import de.lit.ribbonfx.model.AppTabData;
 /**
  * @author aliebelt
  */
-public class RibbonAppTabBuilder extends AbstractTabBuilder<RibbonAppTabBuilder> {
+public class AppTabBuilder extends AbstractTabBuilder<AppTabBuilder> {
 
 	/**
 	 * Hidden constructor
 	 */
-	RibbonAppTabBuilder() {
+	AppTabBuilder() {
 		super.tabData = new AppTabData();
 	}
 
-	public static RibbonAppTabBuilder create() {
-		return new RibbonAppTabBuilder();
+	public static AppTabBuilder create() {
+		return new AppTabBuilder();
 	}
 
 	public AppTabData build() {

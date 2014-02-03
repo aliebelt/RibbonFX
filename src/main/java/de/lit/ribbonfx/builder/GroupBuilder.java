@@ -6,27 +6,27 @@ import de.lit.ribbonfx.model.GroupData;
 /**
  * @author aliebelt
  */
-public class RibbonGroupBuilder {
+public class GroupBuilder {
 
 	GroupData groupData;
 
 	/**
 	 * Hidden constructor
 	 */
-	RibbonGroupBuilder() {
+	GroupBuilder() {
 		this.groupData = new GroupData();
 	}
 
-	public static RibbonGroupBuilder create() {
-		return new RibbonGroupBuilder();
+	public static GroupBuilder create() {
+		return new GroupBuilder();
 	}
 
-	public RibbonGroupBuilder title(String title) {
+	public GroupBuilder title(String title) {
 		this.groupData.title().set(title);
 		return this;
 	}
 
-	public RibbonGroupBuilder buttons(ButtonData... buttons) {
+	public GroupBuilder buttons(ButtonData... buttons) {
 		this.groupData.buttonDataList().addAll(buttons);
 		return this;
 	}

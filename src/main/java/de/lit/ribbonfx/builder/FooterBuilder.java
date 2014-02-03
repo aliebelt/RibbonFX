@@ -6,27 +6,27 @@ import de.lit.ribbonfx.model.FooterData;
 /**
  * @author aliebelt
  */
-public class RibbonFooterBuilder {
+public class FooterBuilder {
 
 	FooterData footerData;
 
 	/**
 	 * Hidden constructor
 	 */
-	RibbonFooterBuilder() {
+	FooterBuilder() {
 		this.footerData = new FooterData();
 	}
 
-	public static RibbonFooterBuilder create() {
-		return new RibbonFooterBuilder();
+	public static FooterBuilder create() {
+		return new FooterBuilder();
 	}
 
-	public RibbonFooterBuilder leftButtons(FooterButtonData... buttons) {
+	public FooterBuilder leftButtons(FooterButtonData... buttons) {
 		this.footerData.footerLeftButtonDataList().addAll(buttons);
 		return this;
 	}
 
-	public RibbonFooterBuilder rightButtons(FooterButtonData... buttons) {
+	public FooterBuilder rightButtons(FooterButtonData... buttons) {
 		this.footerData.footerRightButtonDataList().addAll(buttons);
 		return this;
 	}
