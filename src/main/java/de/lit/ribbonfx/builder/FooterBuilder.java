@@ -1,6 +1,6 @@
 package de.lit.ribbonfx.builder;
 
-import de.lit.ribbonfx.model.FooterButtonData;
+import de.lit.ribbonfx.model.ButtonDataFooter;
 import de.lit.ribbonfx.model.FooterData;
 
 /**
@@ -21,12 +21,12 @@ public class FooterBuilder {
 		return new FooterBuilder();
 	}
 
-	public FooterBuilder leftButtons(FooterButtonData... buttons) {
+	public FooterBuilder leftButtons(ButtonDataFooter... buttons) {
 		this.footerData.footerLeftButtonDataList().addAll(buttons);
 		return this;
 	}
 
-	public FooterBuilder rightButtons(FooterButtonData... buttons) {
+	public FooterBuilder rightButtons(ButtonDataFooter... buttons) {
 		this.footerData.footerRightButtonDataList().addAll(buttons);
 		return this;
 	}

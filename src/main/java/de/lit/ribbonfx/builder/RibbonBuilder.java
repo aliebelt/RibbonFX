@@ -11,7 +11,7 @@ import de.lit.ribbonfx.Ribbon;
 import de.lit.ribbonfx.actions.ButtonAction;
 import de.lit.ribbonfx.model.AppTabData;
 import de.lit.ribbonfx.model.ButtonData;
-import de.lit.ribbonfx.model.FooterButtonData;
+import de.lit.ribbonfx.model.ButtonDataFooter;
 import de.lit.ribbonfx.model.FooterData;
 import de.lit.ribbonfx.model.GroupData;
 import de.lit.ribbonfx.model.SimpleButtonData;
@@ -100,7 +100,7 @@ public class RibbonBuilder {
 				FooterData footerData = this.appTabData.footer().get();
 				FooterView footerView = new FooterView();
 				FooterPresenter footerPresenter = (FooterPresenter) footerView.getPresenter();
-				for (FooterButtonData iFooterButton : footerData.footerLeftButtonDataList()) {
+				for (ButtonDataFooter iFooterButton : footerData.footerLeftButtonDataList()) {
 					if (iFooterButton instanceof SimpleFooterButtonData) {
 						SimpleFooterButtonData iSimpleFooterButtonData = (SimpleFooterButtonData) iFooterButton;
 						// Initialize simple-footer-button
@@ -118,7 +118,7 @@ public class RibbonBuilder {
 						footerPresenter.addLeftButton(iSimpleFooterButton);
 					}
 				}
-				for (FooterButtonData iFooterButton : footerData.footerRightButtonDataList()) {
+				for (ButtonDataFooter iFooterButton : footerData.footerRightButtonDataList()) {
 					if (iFooterButton instanceof SimpleFooterButtonData) {
 						SimpleFooterButtonData iSimpleFooterButtonData = (SimpleFooterButtonData) iFooterButton;
 						// Initialize simple-footer-button
@@ -165,7 +165,7 @@ public class RibbonBuilder {
 				FooterData iFooterData = iTabData.footer().get();
 				FooterView iFooterView = new FooterView();
 				FooterPresenter iFooterPresenter = (FooterPresenter) iFooterView.getPresenter();
-				for (FooterButtonData kFooterButton : iFooterData.footerLeftButtonDataList()) {
+				for (ButtonDataFooter kFooterButton : iFooterData.footerLeftButtonDataList()) {
 					if (kFooterButton instanceof SimpleFooterButtonData) {
 						SimpleFooterButtonData kSimpleFooterButtonData = (SimpleFooterButtonData) kFooterButton;
 						// Initialize simple-footer-button
@@ -183,7 +183,7 @@ public class RibbonBuilder {
 						iFooterPresenter.addLeftButton(kSimpleFooterButton);
 					}
 				}
-				for (FooterButtonData kFooterButton : iFooterData.footerRightButtonDataList()) {
+				for (ButtonDataFooter kFooterButton : iFooterData.footerRightButtonDataList()) {
 					if (kFooterButton instanceof SimpleFooterButtonData) {
 						SimpleFooterButtonData kSimpleFooterButtonData = (SimpleFooterButtonData) kFooterButton;
 						// Initialize simple-footer-button

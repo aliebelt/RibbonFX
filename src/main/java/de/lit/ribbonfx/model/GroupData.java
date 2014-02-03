@@ -8,7 +8,7 @@ import javafx.collections.ObservableList;
 public class GroupData {
 
 	StringProperty title;
-	ObservableList<ButtonData> buttonDataList;
+	ObservableList<ButtonDataRibbon> buttonDataList;
 
 	/**
 	 * Hidden constructor
@@ -22,7 +22,7 @@ public class GroupData {
 		return this.title;
 	}
 
-	public ObservableList<ButtonData> buttonDataList() {
+	public ObservableList<ButtonDataRibbon> buttonDataList() {
 		return this.buttonDataList;
 	}
 

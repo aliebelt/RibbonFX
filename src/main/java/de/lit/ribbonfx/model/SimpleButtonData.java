@@ -1,7 +1,6 @@
 package de.lit.ribbonfx.model;
 
-
-public class SimpleButtonData extends AbstractSimpleButtonData implements ButtonData {
+public class SimpleButtonData extends AbstractSimpleButtonData implements ButtonDataRibbon {
 
 	public SimpleButtonData() {
 		super();

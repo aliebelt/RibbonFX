@@ -5,8 +5,8 @@ import javafx.collections.ObservableList;
 
 public class FooterData {
 
-	ObservableList<FooterButtonData> footerLeftButtonDataList;
-	ObservableList<FooterButtonData> footerRightButtonDataList;
+	ObservableList<ButtonDataFooter> footerLeftButtonDataList;
+	ObservableList<ButtonDataFooter> footerRightButtonDataList;
 
 	/**
 	 * Hidden constructor
@@ -16,11 +16,11 @@ public class FooterData {
 		this.footerRightButtonDataList = FXCollections.observableArrayList();
 	}
 
-	public ObservableList<FooterButtonData> footerLeftButtonDataList() {
+	public ObservableList<ButtonDataFooter> footerLeftButtonDataList() {
 		return this.footerLeftButtonDataList;
 	}
 
-	public ObservableList<FooterButtonData> footerRightButtonDataList() {
+	public ObservableList<ButtonDataFooter> footerRightButtonDataList() {
 		return this.footerRightButtonDataList;
 	}
 

@@ -5,6 +5,6 @@ package de.lit.ribbonfx.model;
  * 
  * @author a.liebelt
  */
-public interface FooterButtonData extends ButtonData {
+public interface ButtonDataFooter extends ButtonData {
 	// Empty
 }

@@ -1,6 +1,6 @@
 package de.lit.ribbonfx.builder;
 
-import de.lit.ribbonfx.model.ButtonData;
+import de.lit.ribbonfx.model.ButtonDataRibbon;
 import de.lit.ribbonfx.model.GroupData;
 
 /**
@@ -26,7 +26,7 @@ public class GroupBuilder {
 		return this;
 	}
 
-	public GroupBuilder buttons(ButtonData... buttons) {
+	public GroupBuilder buttons(ButtonDataRibbon... buttons) {
 		this.groupData.buttonDataList().addAll(buttons);
 		return this;
 	}

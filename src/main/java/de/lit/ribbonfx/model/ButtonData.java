@@ -1,7 +1,7 @@
 package de.lit.ribbonfx.model;
 
 /**
- * Marker interface for all ribbon buttons.
+ * Marker interface for all buttons.
  * 
  * @author a.liebelt
  */
