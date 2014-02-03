@@ -43,10 +43,6 @@ public class SimpleButtonPresenter implements Initializable {
 		return this.text;
 	}
 
-	public void clicked() {
-
-	}
-
 	@FXML
 	ImageView imageViewSimpleButtonSymbol;
 

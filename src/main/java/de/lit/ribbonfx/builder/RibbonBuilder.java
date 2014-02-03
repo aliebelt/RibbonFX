@@ -112,7 +112,8 @@ public class RibbonBuilder {
 						iSimpleFooterButtonPresenter.setImage(iSimpleFooterButtonData.image().get());
 						iSimpleFooterButtonPresenter.text().bind(iSimpleFooterButtonData.text());
 						iSimpleFooterButton.disableProperty().bind(iSimpleFooterButtonData.disabled());
-						iSimpleFooterButton.setOnMouseClicked((MouseEvent e) -> this.ribbon.fire(new ButtonAction(iSimpleFooterButtonData)));
+						iSimpleFooterButtonPresenter.getButton().setOnMouseClicked(
+								(MouseEvent e) -> this.ribbon.fire(new ButtonAction(iSimpleFooterButtonData)));
 						// Add simple-footer-button
 						footerPresenter.addLeftButton(iSimpleFooterButton);
 					}
@@ -129,7 +130,8 @@ public class RibbonBuilder {
 						iSimpleFooterButtonPresenter.setImage(iSimpleFooterButtonData.image().get());
 						iSimpleFooterButtonPresenter.text().bind(iSimpleFooterButtonData.text());
 						iSimpleFooterButton.disableProperty().bind(iSimpleFooterButtonData.disabled());
-						iSimpleFooterButton.setOnMouseClicked((MouseEvent e) -> this.ribbon.fire(new ButtonAction(iSimpleFooterButtonData)));
+						iSimpleFooterButtonPresenter.getButton().setOnMouseClicked(
+								(MouseEvent e) -> this.ribbon.fire(new ButtonAction(iSimpleFooterButtonData)));
 						// Add simple-footer-button
 						footerPresenter.addRightButton(iSimpleFooterButton);
 					}
@@ -175,7 +177,8 @@ public class RibbonBuilder {
 						kSimpleFooterButtonPresenter.setImage(kSimpleFooterButtonData.image().get());
 						kSimpleFooterButtonPresenter.text().bind(kSimpleFooterButtonData.text());
 						kSimpleFooterButton.disableProperty().bind(kSimpleFooterButtonData.disabled());
-						kSimpleFooterButton.setOnMouseClicked((MouseEvent e) -> this.ribbon.fire(new ButtonAction(kSimpleFooterButtonData)));
+						kSimpleFooterButtonPresenter.getButton().setOnMouseClicked(
+								(MouseEvent e) -> this.ribbon.fire(new ButtonAction(kSimpleFooterButtonData)));
 						// Add simple-footer-button
 						iFooterPresenter.addLeftButton(kSimpleFooterButton);
 					}
@@ -192,7 +195,8 @@ public class RibbonBuilder {
 						kSimpleFooterButtonPresenter.setImage(kSimpleFooterButtonData.image().get());
 						kSimpleFooterButtonPresenter.text().bind(kSimpleFooterButtonData.text());
 						kSimpleFooterButton.disableProperty().bind(kSimpleFooterButtonData.disabled());
-						kSimpleFooterButton.setOnMouseClicked((MouseEvent e) -> this.ribbon.fire(new ButtonAction(kSimpleFooterButtonData)));
+						kSimpleFooterButtonPresenter.getButton().setOnMouseClicked(
+								(MouseEvent e) -> this.ribbon.fire(new ButtonAction(kSimpleFooterButtonData)));
 						// Add simple-footer-button
 						iFooterPresenter.addRightButton(kSimpleFooterButton);
 					}

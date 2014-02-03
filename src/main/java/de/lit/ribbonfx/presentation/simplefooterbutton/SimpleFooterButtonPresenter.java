@@ -6,9 +6,12 @@ import java.util.ResourceBundle;
 import javafx.beans.property.StringProperty;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
 import javafx.scene.control.Label;
+import javafx.scene.control.Separator;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 
 public class SimpleFooterButtonPresenter implements Initializable {
 
@@ -18,7 +21,17 @@ public class SimpleFooterButtonPresenter implements Initializable {
 	}
 
 	public void setLeft(boolean left) {
-
+		if (left) {
+			this.separatorLeft.setPrefWidth(0);
+			this.separatorLeft.setVisible(false);
+			this.separatorRight.setPrefWidth(3);
+			this.separatorRight.setVisible(true);
+		} else {
+			this.separatorRight.setPrefWidth(0);
+			this.separatorRight.setVisible(false);
+			this.separatorLeft.setPrefWidth(3);
+			this.separatorLeft.setVisible(true);
+		}
 	}
 
 	public void setImage(Image image) {
@@ -29,14 +42,23 @@ public class SimpleFooterButtonPresenter implements Initializable {
 		return this.labelSimpleButtonText.textProperty();
 	}
 
-	public void clicked() {
-
+	public Parent getButton() {
+		return this.anchorPaneButton;
 	}
+
+	@FXML
+	Separator separatorLeft;
+
+	@FXML
+	AnchorPane anchorPaneButton;
 
 	@FXML
 	ImageView imageViewSimpleButtonSymbol;
 
 	@FXML
 	Label labelSimpleButtonText;
+
+	@FXML
+	Separator separatorRight;
 
 }

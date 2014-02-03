@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.*?>
 
 <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.lit.ribbonfx.presentation.simplefooterbutton.SimpleFooterButtonPresenter">
-<children><Separator id="buttonSeparator" fx:id="separatorLeft" maxWidth="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefWidth="0.0" visible="false" /><AnchorPane id="simpleButton" maxHeight="-Infinity" minHeight="-Infinity" onMouseClicked="#clicked" prefHeight="19.0" HBox.hgrow="NEVER" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<children><Separator id="buttonSeparator" fx:id="separatorLeft" maxWidth="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefWidth="0.0" visible="false" /><AnchorPane id="simpleButton" fx:id="anchorPaneButton" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="19.0" HBox.hgrow="NEVER" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
 <children>
 <HBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="0.0">
 <children>
