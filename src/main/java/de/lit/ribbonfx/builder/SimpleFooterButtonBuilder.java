@@ -19,11 +19,6 @@ public class SimpleFooterButtonBuilder extends AbstractSimpleButtonBuilder<Simpl
 		return new SimpleFooterButtonBuilder();
 	}
 
-	public SimpleFooterButtonBuilder left(boolean left) {
-		((SimpleFooterButtonData) this.simpleButtonData).left().set(left);
-		return this;
-	}
-
 	public SimpleFooterButtonData build() {
 		return (SimpleFooterButtonData) this.simpleButtonData;
 	}
