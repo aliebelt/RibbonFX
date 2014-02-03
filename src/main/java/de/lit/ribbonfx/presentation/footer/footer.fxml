@@ -8,7 +8,7 @@
 <children><AnchorPane HBox.hgrow="ALWAYS">
 <children><HBox fx:id="hBoxLeftButtons" prefHeight="22.0" prefWidth="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
 </children></AnchorPane><AnchorPane HBox.hgrow="NEVER">
-<children><HBox fx:id="hBoxRightButtons" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+<children><HBox fx:id="hBoxRightButtons" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="0.0" />
 </children></AnchorPane>
 </children></HBox>
 </children></AnchorPane>

@@ -3,6 +3,7 @@ package de.lit.ribbonfx.presentation.simplefooterbutton;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import javafx.beans.Observable;
 import javafx.beans.property.StringProperty;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -12,12 +13,13 @@ import javafx.scene.control.Separator;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.HBox;
 
 public class SimpleFooterButtonPresenter implements Initializable {
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-		// Empty
+		this.labelSimpleButtonText.textProperty().addListener((Observable o) -> configureHBoxSpacing());
 	}
 
 	public void setLeft(boolean left) {
@@ -36,6 +38,7 @@ public class SimpleFooterButtonPresenter implements Initializable {
 
 	public void setImage(Image image) {
 		this.imageViewSimpleButtonSymbol.setImage(image);
+		configureHBoxSpacing();
 	}
 
 	public StringProperty text() {
@@ -46,11 +49,22 @@ public class SimpleFooterButtonPresenter implements Initializable {
 		return this.anchorPaneButton;
 	}
 
+	private void configureHBoxSpacing() {
+		if (this.imageViewSimpleButtonSymbol.getImage() != null && this.labelSimpleButtonText.getText() != "") {
+			this.hBoxButtonContent.setSpacing(5);
+		} else {
+			this.hBoxButtonContent.setSpacing(0);
+		}
+	}
+
 	@FXML
 	Separator separatorLeft;
 
 	@FXML
 	AnchorPane anchorPaneButton;
+
+	@FXML
+	HBox hBoxButtonContent;
 
 	@FXML
 	ImageView imageViewSimpleButtonSymbol;

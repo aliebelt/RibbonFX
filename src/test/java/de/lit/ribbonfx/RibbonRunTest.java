@@ -35,8 +35,11 @@ public class RibbonRunTest extends Application {
 		GroupData groupData11 = GroupBuilder.create().title("Zwischenablage").build();
 		GroupData groupData12 = GroupBuilder.create().title("Schriftart").build();
 		Label labelTab1 = new Label("Content of Tab 1");
-		SimpleFooterButtonData simpleFooterButtonData = SimpleFooterButtonBuilder.create().text("Text").build();
-		FooterData footer = FooterBuilder.create().leftButtons(simpleFooterButtonData).build();
+		SimpleFooterButtonData simpleFooterButtonData1 = SimpleFooterButtonBuilder.create().text("Seite: 1 von 1").build();
+		SimpleFooterButtonData simpleFooterButtonData2 = SimpleFooterButtonBuilder.create().image(new Image("/images/no-macro-recording.png")).text("Macro")
+				.build();
+		SimpleFooterButtonData simpleFooterButtonData3 = SimpleFooterButtonBuilder.create().image(new Image("/images/no-macro-recording.png")).build();
+		FooterData footer = FooterBuilder.create().leftButtons(simpleFooterButtonData1, simpleFooterButtonData2).rightButtons(simpleFooterButtonData3).build();
 		TabData tab1 = TabBuilder.create().title("Start").groups(groupData11, groupData12).content(labelTab1).footer(footer).build();
 		GroupData groupData21 = GroupBuilder.create().title("Tabellen").build();
 		GroupData groupData22 = GroupBuilder.create().title("Illustrationen").build();

@@ -16,7 +16,7 @@ public abstract class AbstractSimpleButtonData {
 
 	public AbstractSimpleButtonData() {
 		this.image = new SimpleObjectProperty<Image>();
-		this.text = new SimpleStringProperty("unnamed");
+		this.text = new SimpleStringProperty("");
 		this.disabled = new SimpleBooleanProperty(false);
 	}
 
