@@ -6,15 +6,23 @@ import java.util.ResourceBundle;
 import javafx.beans.Observable;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.StringProperty;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.geometry.Point2D;
 import javafx.scene.Parent;
 import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
 import javafx.scene.control.Separator;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
+import javafx.util.Callback;
+
+import org.controlsfx.control.PopOver;
+import org.controlsfx.control.PopOver.ArrowLocation;
 
 public class SimpleFooterButtonPresenter implements Initializable {
 
@@ -48,6 +56,35 @@ public class SimpleFooterButtonPresenter implements Initializable {
 
 	public Parent getButton() {
 		return this.anchorPaneButton;
+	}
+
+	@SuppressWarnings({ "rawtypes", "unchecked" })
+	public void popOverContent(ObservableList items, Callback cellFactory) {
+		ListView listView = new ListView(items);
+		if (cellFactory != null) {
+			listView.setCellFactory(cellFactory);
+		}
+		PopOver popOver = new PopOver(listView);
+		popOver.setArrowLocation(ArrowLocation.BOTTOM_CENTER);
+		popOver.setHideOnEscape(true);
+		popOver.setAutoHide(true);
+
+		popOver.detachedProperty().addListener((Observable o) -> {
+			if (popOver.isDetached()) {
+				popOver.setAutoHide(false);
+			} else {
+				popOver.setAutoHide(true);
+			}
+		});
+
+		this.anchorPaneButton.setOnMousePressed((MouseEvent e) -> {
+			if (popOver.isShowing() == false) {
+				Point2D point2d = anchorPaneButton.localToScreen(0, 0);
+				popOver.show(anchorPaneButton, point2d.getX() + (anchorPaneButton.getWidth() * 0.5), point2d.getY());
+			} else {
+				popOver.hide();
+			}
+		});
 	}
 
 	private void configureHBoxSpacing() {
