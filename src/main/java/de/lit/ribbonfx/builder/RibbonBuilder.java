@@ -109,7 +109,7 @@ public class RibbonBuilder {
 						Parent iSimpleFooterButton = iSimpleFooterButtonView.getView();
 						// Customize simple-footer-button
 						iSimpleFooterButtonPresenter.setLeft(true);
-						iSimpleFooterButtonPresenter.setImage(iSimpleFooterButtonData.image().get());
+						iSimpleFooterButtonPresenter.image().bind(iSimpleFooterButtonData.image());
 						iSimpleFooterButtonPresenter.text().bind(iSimpleFooterButtonData.text());
 						iSimpleFooterButton.disableProperty().bind(iSimpleFooterButtonData.disabled());
 						iSimpleFooterButtonPresenter.getButton().setOnMouseClicked(
@@ -127,7 +127,7 @@ public class RibbonBuilder {
 						Parent iSimpleFooterButton = iSimpleFooterButtonView.getView();
 						// Customize simple-footer-button
 						iSimpleFooterButtonPresenter.setLeft(false);
-						iSimpleFooterButtonPresenter.setImage(iSimpleFooterButtonData.image().get());
+						iSimpleFooterButtonPresenter.image().bind(iSimpleFooterButtonData.image());
 						iSimpleFooterButtonPresenter.text().bind(iSimpleFooterButtonData.text());
 						iSimpleFooterButton.disableProperty().bind(iSimpleFooterButtonData.disabled());
 						iSimpleFooterButtonPresenter.getButton().setOnMouseClicked(
@@ -174,7 +174,7 @@ public class RibbonBuilder {
 						Parent kSimpleFooterButton = kSimpleFooterButtonView.getView();
 						// Customize simple-footer-button
 						kSimpleFooterButtonPresenter.setLeft(true);
-						kSimpleFooterButtonPresenter.setImage(kSimpleFooterButtonData.image().get());
+						kSimpleFooterButtonPresenter.image().bind(kSimpleFooterButtonData.image());
 						kSimpleFooterButtonPresenter.text().bind(kSimpleFooterButtonData.text());
 						kSimpleFooterButton.disableProperty().bind(kSimpleFooterButtonData.disabled());
 						kSimpleFooterButtonPresenter.getButton().setOnMouseClicked(
@@ -192,7 +192,7 @@ public class RibbonBuilder {
 						Parent kSimpleFooterButton = kSimpleFooterButtonView.getView();
 						// Customize simple-footer-button
 						kSimpleFooterButtonPresenter.setLeft(false);
-						kSimpleFooterButtonPresenter.setImage(kSimpleFooterButtonData.image().get());
+						kSimpleFooterButtonPresenter.image().bind(kSimpleFooterButtonData.image());
 						kSimpleFooterButtonPresenter.text().bind(kSimpleFooterButtonData.text());
 						kSimpleFooterButton.disableProperty().bind(kSimpleFooterButtonData.disabled());
 						kSimpleFooterButtonPresenter.getButton().setOnMouseClicked(

@@ -4,6 +4,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import javafx.beans.Observable;
+import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.StringProperty;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -19,6 +20,7 @@ public class SimpleFooterButtonPresenter implements Initializable {
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
+		this.imageViewSimpleButtonSymbol.imageProperty().addListener((Observable o) -> configureHBoxSpacing());
 		this.labelSimpleButtonText.textProperty().addListener((Observable o) -> configureHBoxSpacing());
 	}
 
@@ -36,9 +38,8 @@ public class SimpleFooterButtonPresenter implements Initializable {
 		}
 	}
 
-	public void setImage(Image image) {
-		this.imageViewSimpleButtonSymbol.setImage(image);
-		configureHBoxSpacing();
+	public ObjectProperty<Image> image() {
+		return this.imageViewSimpleButtonSymbol.imageProperty();
 	}
 
 	public StringProperty text() {
