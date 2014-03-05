@@ -29,7 +29,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-release-plugin</artifactId>
-				<version>2.4.2</version>
+				<version>2.5</version>
 				<configuration>
 					<tagNameFormat>v@{project.version}</tagNameFormat>
 				</configuration>
@@ -82,7 +82,7 @@
 
 	<scm>
 		<connection>scm:git:https://github.com/aliebelt/RibbonFX.git</connection>
-		<developerConnection>scm:git:https://git@github.com/aliebelt/RibbonFX.git</developerConnection>
+		<developerConnection>scm:git:https://github.com/aliebelt/RibbonFX.git</developerConnection>
 		<url>https://github.com/aliebelt/RibbonFX</url>
 		<tag>HEAD</tag>
 	</scm>
