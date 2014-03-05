@@ -81,8 +81,8 @@
 	</build>
 
 	<scm>
-		<connection>scm:git:https://github.com:aliebelt/RibbonFX.git</connection>
-		<developerConnection>scm:git:https://git@github.com:aliebelt/RibbonFX.git</developerConnection>
+		<connection>scm:git:https://github.com/aliebelt/RibbonFX.git</connection>
+		<developerConnection>scm:git:https://git@github.com/aliebelt/RibbonFX.git</developerConnection>
 		<url>http://github.com/aliebelt/RibbonFX</url>
 		<tag>HEAD</tag>
 	</scm>
