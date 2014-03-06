@@ -79,8 +79,8 @@
 	</build>
 
 	<scm>
-		<connection>scm:git:https://github.com/aliebelt/RibbonFX.git</connection>
-		<developerConnection>scm:git:https://github.com/aliebelt/RibbonFX.git</developerConnection>
+		<connection>scm:git:git://github.com/aliebelt/RibbonFX.git</connection>
+		<developerConnection>scm:git:git://github.com/aliebelt/RibbonFX.git</developerConnection>
 		<url>https://github.com/aliebelt/RibbonFX</url>
 		<tag>HEAD</tag>
 	</scm>
@@ -127,7 +127,6 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<github.global.server>github.com</github.global.server>
 	</properties>
 
 </project>
