@@ -51,6 +51,7 @@
 					<outputDirectory>${project.build.directory}/mvn-repo</outputDirectory>
 					<branch>refs/heads/mvn-repo</branch>
 					<merge>true</merge>
+					<server>github</server>
 					<includes>
 						<include>**/*</include>
 					</includes>
