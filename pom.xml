@@ -80,8 +80,8 @@
 	</build>
 
 	<scm>
-		<connection>scm:git:git://github.com/aliebelt/RibbonFX.git</connection>
-		<developerConnection>scm:git:git://github.com/aliebelt/RibbonFX.git</developerConnection>
+		<connection>scm:git:ssh://github.com/aliebelt/RibbonFX.git</connection>
+		<developerConnection>scm:git:ssh://github.com/aliebelt/RibbonFX.git</developerConnection>
 		<url>https://github.com/aliebelt/RibbonFX</url>
 		<tag>HEAD</tag>
 	</scm>
