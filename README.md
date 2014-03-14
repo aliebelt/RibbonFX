@@ -11,5 +11,4 @@ Implemented Features
 Planned Features
 ----------------
 
-* Resize corner hiding on maximized or fullscreen mode
 * Vertical navigation bar like in Office 2010 File Tab 
