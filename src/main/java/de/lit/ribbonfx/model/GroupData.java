@@ -14,7 +14,7 @@ public class GroupData {
 	 * Hidden constructor
 	 */
 	public GroupData() {
-		this.title = new SimpleStringProperty("unnamed");
+		this.title = new SimpleStringProperty("NO_TITLE");
 		this.buttonDataList = FXCollections.observableArrayList();
 	}
 

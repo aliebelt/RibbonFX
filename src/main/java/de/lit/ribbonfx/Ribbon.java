@@ -15,8 +15,8 @@ import de.lit.ribbonfx.presentation.container.ContainerView;
 
 public class Ribbon extends AnchorPane {
 
-	TabPane tabPane;
-	ContainerPresenter tabPanePresenter;
+	TabPane ribbonTabPane;
+	ContainerPresenter ribbonTabPanePresenter;
 
 	/**
 	 * Hidden constructor
@@ -24,22 +24,22 @@ public class Ribbon extends AnchorPane {
 	public Ribbon() {
 		setBackground(new Background((BackgroundFill) null));
 		ContainerView tabPaneView = new ContainerView();
-		this.tabPane = (TabPane) tabPaneView.getView();
-		this.tabPanePresenter = (ContainerPresenter) tabPaneView.getPresenter();
+		this.ribbonTabPane = (TabPane) tabPaneView.getView();
+		this.ribbonTabPanePresenter = (ContainerPresenter) tabPaneView.getPresenter();
 
-		getChildren().add(this.tabPane);
-		AnchorPane.setBottomAnchor(this.tabPane, 0.0);
-		AnchorPane.setLeftAnchor(this.tabPane, 0.0);
-		AnchorPane.setRightAnchor(this.tabPane, 0.0);
-		AnchorPane.setTopAnchor(this.tabPane, 0.0);
+		getChildren().add(this.ribbonTabPane);
+		AnchorPane.setBottomAnchor(this.ribbonTabPane, 0.0);
+		AnchorPane.setLeftAnchor(this.ribbonTabPane, 0.0);
+		AnchorPane.setRightAnchor(this.ribbonTabPane, 0.0);
+		AnchorPane.setTopAnchor(this.ribbonTabPane, 0.0);
 	}
 
 	public void setAccent(Paint accent) {
-		this.tabPanePresenter.setAccent(accent);
+		this.ribbonTabPanePresenter.setAccent(accent);
 	}
 
 	public TabPane getTabPane() {
-		return this.tabPane;
+		return this.ribbonTabPane;
 	}
 
 	public final void setOnAction(EventHandler<ActionEvent> value) {

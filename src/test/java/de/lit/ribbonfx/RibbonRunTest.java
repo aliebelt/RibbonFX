@@ -19,19 +19,25 @@ import de.lit.ribbonfx.builder.GroupBuilder;
 import de.lit.ribbonfx.builder.RibbonBuilder;
 import de.lit.ribbonfx.builder.SimpleButtonBuilder;
 import de.lit.ribbonfx.builder.SimpleFooterButtonBuilder;
+import de.lit.ribbonfx.builder.SubSelectionBuilder;
+import de.lit.ribbonfx.builder.SubSelectorBuilder;
 import de.lit.ribbonfx.builder.TabBuilder;
 import de.lit.ribbonfx.model.AppTabData;
 import de.lit.ribbonfx.model.FooterData;
 import de.lit.ribbonfx.model.GroupData;
 import de.lit.ribbonfx.model.SimpleButtonData;
 import de.lit.ribbonfx.model.SimpleFooterButtonData;
+import de.lit.ribbonfx.model.SubSelectionData;
 import de.lit.ribbonfx.model.TabData;
 
 public class RibbonRunTest extends Application {
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
-		AppTabData appTab = AppTabBuilder.create().title("Datei").build();
+		SubSelectionData subSelectionData1 = SubSelectionBuilder.create().title("Informationen").content(new Label("TODO 1")).build();
+		SubSelectionData subSelectionData2 = SubSelectionBuilder.create().title("Zuletzt\nverwendet").content(new Label("TODO 2")).build();
+		SubSelector appTabSubSelector = SubSelectorBuilder.create().accent(Color.RED).subSelections(subSelectionData1, subSelectionData2).build();
+		AppTabData appTab = AppTabBuilder.create().title("Datei").content(appTabSubSelector).build();
 		GroupData groupData11 = GroupBuilder.create().title("Zwischenablage").build();
 		GroupData groupData12 = GroupBuilder.create().title("Schriftart").build();
 		Label labelTab1 = new Label("Content of Tab 1");
