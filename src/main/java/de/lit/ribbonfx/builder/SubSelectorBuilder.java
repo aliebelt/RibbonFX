@@ -2,6 +2,7 @@ package de.lit.ribbonfx.builder;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.scene.control.Button;
 import javafx.scene.control.Tab;
 import javafx.scene.paint.Paint;
 import de.lit.ribbonfx.SubSelector;
@@ -59,6 +60,14 @@ public class SubSelectorBuilder {
 			// TODO
 			// this.ribbon.setAccent(this.accent);
 		}
+		for (SubSelectorButtonData iTopButtonData : this.topButtonList) {
+			// TODO Button Module
+			Button iTopButton = new Button();
+			iTopButton.textProperty().bind(iTopButtonData.text());
+			iTopButton.setLayoutX(8);
+			iTopButton.setLayoutY(8);
+			this.subSelector.getChildren().add(iTopButton);
+		}
 		boolean noTabIsSelected = true;
 		for (CommonTabData iSubSelectionData : this.subSelectionList) {
 			// Initialize Tab
@@ -76,7 +85,14 @@ public class SubSelectorBuilder {
 				noTabIsSelected = false;
 			}
 		}
+		for (SubSelectorButtonData iBottomButtonData : this.bottomButtonList) {
+			// TODO Button Module
+			Button iBottomButton = new Button();
+			iBottomButton.textProperty().bind(iBottomButtonData.text());
+			iBottomButton.setLayoutX(8);
+			iBottomButton.setLayoutY(170);
+			this.subSelector.getChildren().add(iBottomButton);
+		}
 		return this.subSelector;
 	}
-
 }
