@@ -3,7 +3,7 @@ package de.lit.ribbonfx.model;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
-public class TabData extends AbstractTabData {
+public class TabData extends AbstractRibbonTabData {
 
 	ObservableList<GroupData> groupDataList;
 

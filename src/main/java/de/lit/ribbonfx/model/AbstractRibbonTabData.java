@@ -8,14 +8,14 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 import javafx.scene.Node;
 
-public abstract class AbstractTabData {
+public abstract class AbstractRibbonTabData {
 
 	StringProperty title;
 	BooleanProperty disabled;
 	ObjectProperty<Node> content;
 	ObjectProperty<FooterData> footer;
 
-	public AbstractTabData() {
+	public AbstractRibbonTabData() {
 		this.title = new SimpleStringProperty("NO_TITLE");
 		this.disabled = new SimpleBooleanProperty(false);
 		this.content = new SimpleObjectProperty<Node>();

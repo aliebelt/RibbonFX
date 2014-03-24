@@ -1,7 +1,7 @@
 package de.lit.ribbonfx.builder;
 
 import javafx.scene.Node;
-import de.lit.ribbonfx.model.AbstractTabData;
+import de.lit.ribbonfx.model.AbstractRibbonTabData;
 import de.lit.ribbonfx.model.FooterData;
 
 /**
@@ -9,7 +9,7 @@ import de.lit.ribbonfx.model.FooterData;
  */
 public abstract class AbstractTabBuilder<T> {
 
-	protected AbstractTabData tabData;
+	protected AbstractRibbonTabData tabData;
 
 	@SuppressWarnings("unchecked")
 	public T title(String title) {

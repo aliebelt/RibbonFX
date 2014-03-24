@@ -1,6 +1,6 @@
 package de.lit.ribbonfx.model;
 
-public class AppTabData extends AbstractTabData {
+public class AppTabData extends AbstractRibbonTabData {
 
 	/**
 	 * Hidden constructor
