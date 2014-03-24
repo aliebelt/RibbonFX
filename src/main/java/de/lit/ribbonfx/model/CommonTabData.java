@@ -6,22 +6,18 @@ import javafx.beans.property.SimpleBooleanProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
-import javafx.scene.Group;
 import javafx.scene.Node;
 
-public class SubSelectionData {
+public class CommonTabData {
 
 	StringProperty title;
 	BooleanProperty disabled;
 	ObjectProperty<Node> content;
 
-	/**
-	 * Hidden constructor
-	 */
-	public SubSelectionData() {
+	public CommonTabData() {
 		this.title = new SimpleStringProperty("NO_TITLE");
 		this.disabled = new SimpleBooleanProperty(false);
-		this.content = new SimpleObjectProperty<>(new Group());
+		this.content = new SimpleObjectProperty<Node>();
 	}
 
 	public StringProperty title() {

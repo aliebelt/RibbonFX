@@ -5,7 +5,7 @@ import javafx.collections.ObservableList;
 import javafx.scene.control.Tab;
 import javafx.scene.paint.Paint;
 import de.lit.ribbonfx.SubSelector;
-import de.lit.ribbonfx.model.SubSelectionData;
+import de.lit.ribbonfx.model.CommonTabData;
 
 /**
  * @author aliebelt
@@ -13,7 +13,7 @@ import de.lit.ribbonfx.model.SubSelectionData;
 public class SubSelectorBuilder {
 
 	SubSelector subSelector;
-	ObservableList<SubSelectionData> subSelectionList;
+	ObservableList<CommonTabData> subSelectionList;
 	Paint accent;
 
 	/**
@@ -28,7 +28,7 @@ public class SubSelectorBuilder {
 		return new SubSelectorBuilder();
 	}
 
-	public SubSelectorBuilder subSelections(SubSelectionData... subSelections) {
+	public SubSelectorBuilder subSelections(CommonTabData... subSelections) {
 		this.subSelectionList.addAll(subSelections);
 		return this;
 	}
@@ -45,7 +45,7 @@ public class SubSelectorBuilder {
 			// this.ribbon.setAccent(this.accent);
 		}
 		boolean noTabIsSelected = true;
-		for (SubSelectionData iSubSelectionData : this.subSelectionList) {
+		for (CommonTabData iSubSelectionData : this.subSelectionList) {
 			// Initialize Tab
 			Tab iTab = new Tab();
 			iTab.setClosable(false);

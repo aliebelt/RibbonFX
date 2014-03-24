@@ -1,17 +1,17 @@
 package de.lit.ribbonfx.builder;
 
 import javafx.scene.Node;
-import de.lit.ribbonfx.model.SubSelectionData;
+import de.lit.ribbonfx.model.CommonTabData;
 
 public class SubSelectionBuilder {
 
-	SubSelectionData subSelectionData;
+	CommonTabData subSelectionData;
 
 	/**
 	 * Hidden constructor
 	 */
 	SubSelectionBuilder() {
-		this.subSelectionData = new SubSelectionData();
+		this.subSelectionData = new CommonTabData();
 	}
 
 	public static SubSelectionBuilder create() {
@@ -33,7 +33,7 @@ public class SubSelectionBuilder {
 		return this;
 	}
 
-	public SubSelectionData build() {
+	public CommonTabData build() {
 		return this.subSelectionData;
 	}
 
