@@ -2,12 +2,14 @@ package de.lit.ribbonfx.builder;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.scene.control.Button;
+import javafx.scene.Parent;
 import javafx.scene.control.Tab;
 import javafx.scene.paint.Paint;
 import de.lit.ribbonfx.SubSelector;
 import de.lit.ribbonfx.model.CommonTabData;
 import de.lit.ribbonfx.model.SubSelectorButtonData;
+import de.lit.ribbonfx.presentation.subselectorbutton.SubSelectorButtonPresenter;
+import de.lit.ribbonfx.presentation.subselectorbutton.SubSelectorButtonView;
 
 /**
  * @author aliebelt
@@ -61,9 +63,11 @@ public class SubSelectorBuilder {
 			// this.ribbon.setAccent(this.accent);
 		}
 		for (SubSelectorButtonData iTopButtonData : this.topButtonList) {
-			// TODO Button Module
-			Button iTopButton = new Button();
-			iTopButton.textProperty().bind(iTopButtonData.text());
+			SubSelectorButtonView iTopButtonView = new SubSelectorButtonView();
+			SubSelectorButtonPresenter iTopButtonPresenter = (SubSelectorButtonPresenter) iTopButtonView.getPresenter();
+			iTopButtonPresenter.image().bind(iTopButtonData.image());
+			iTopButtonPresenter.text().bind(iTopButtonData.text());
+			Parent iTopButton = iTopButtonView.getView();
 			iTopButton.setLayoutX(8);
 			iTopButton.setLayoutY(8);
 			this.subSelector.getChildren().add(iTopButton);
@@ -87,8 +91,11 @@ public class SubSelectorBuilder {
 		}
 		for (SubSelectorButtonData iBottomButtonData : this.bottomButtonList) {
 			// TODO Button Module
-			Button iBottomButton = new Button();
-			iBottomButton.textProperty().bind(iBottomButtonData.text());
+			SubSelectorButtonView iTopButtonView = new SubSelectorButtonView();
+			SubSelectorButtonPresenter iTopButtonPresenter = (SubSelectorButtonPresenter) iTopButtonView.getPresenter();
+			iTopButtonPresenter.image().bind(iBottomButtonData.image());
+			iTopButtonPresenter.text().bind(iBottomButtonData.text());
+			Parent iBottomButton = iTopButtonView.getView();
 			iBottomButton.setLayoutX(8);
 			iBottomButton.setLayoutY(170);
 			this.subSelector.getChildren().add(iBottomButton);

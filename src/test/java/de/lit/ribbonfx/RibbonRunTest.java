@@ -36,7 +36,7 @@ public class RibbonRunTest extends Application {
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
-		SubSelectorButtonData subSelectorTopButtonData1 = SubSelectorButtonBuilder.create().text("Speichern").build();
+		SubSelectorButtonData subSelectorTopButtonData1 = SubSelectorButtonBuilder.create().image(new Image("/images/save.png")).text("Speichern").build();
 		CommonTabData subSelectionData1 = SubSelectionBuilder.create().title("Informationen").content(new Label("TODO 1")).build();
 		CommonTabData subSelectionData2 = SubSelectionBuilder.create().title("Zuletzt\nverwendet").content(new Label("TODO 2")).build();
 		SubSelectorButtonData subSelectorBottomButtonData1 = SubSelectorButtonBuilder.create().text("Optionen").build();
