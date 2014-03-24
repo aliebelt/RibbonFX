@@ -6,6 +6,7 @@ import javafx.scene.control.Tab;
 import javafx.scene.paint.Paint;
 import de.lit.ribbonfx.SubSelector;
 import de.lit.ribbonfx.model.CommonTabData;
+import de.lit.ribbonfx.model.SubSelectorButtonData;
 
 /**
  * @author aliebelt
@@ -13,7 +14,9 @@ import de.lit.ribbonfx.model.CommonTabData;
 public class SubSelectorBuilder {
 
 	SubSelector subSelector;
+	ObservableList<SubSelectorButtonData> topButtonList;
 	ObservableList<CommonTabData> subSelectionList;
+	ObservableList<SubSelectorButtonData> bottomButtonList;
 	Paint accent;
 
 	/**
@@ -21,15 +24,27 @@ public class SubSelectorBuilder {
 	 */
 	SubSelectorBuilder() {
 		this.subSelector = new SubSelector();
+		this.topButtonList = FXCollections.observableArrayList();
 		this.subSelectionList = FXCollections.observableArrayList();
+		this.bottomButtonList = FXCollections.observableArrayList();
 	}
 
 	public static SubSelectorBuilder create() {
 		return new SubSelectorBuilder();
 	}
 
+	public SubSelectorBuilder topButtons(SubSelectorButtonData... topButtons) {
+		this.topButtonList.addAll(topButtons);
+		return this;
+	}
+
 	public SubSelectorBuilder subSelections(CommonTabData... subSelections) {
 		this.subSelectionList.addAll(subSelections);
+		return this;
+	}
+
+	public SubSelectorBuilder bottomButtons(SubSelectorButtonData... bottomButtons) {
+		this.bottomButtonList.addAll(bottomButtons);
 		return this;
 	}
 
