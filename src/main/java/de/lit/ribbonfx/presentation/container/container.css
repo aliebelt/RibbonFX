@@ -26,7 +26,7 @@
 	-fx-effect: null;
 }
 #ribbonTabPane .tab-header-area .headers-region .tab {
-	-fx-padding: 0px 11px 0px 11px;
+	-fx-padding: -1px 11px -1px 11px;
 }
 #ribbonTabPane .tab-header-area .headers-region .tab .tab-container .focus-indicator {
 	-fx-border-width: 0px;
@@ -46,20 +46,25 @@
 		-fx-ribbon-color-base,
 		radial-gradient(center 50% 135%, radius 90%, derive(-fx-ribbon-color-base, 70%) 40%, #FFFFFF00);
 	-fx-background-insets:
-		0px 0px 1px 1px,
-		1px 1px 1px 2px,
-		2px 2px 1px 3px,
-		3px 3px 1px 4px,
-		4px 3px 1px 4px,
-		5px 3px 1px 4px,
-		1px 1px 1px 2px;
+		0px 2px 1px 1px,
+		1px 3px 1px 2px,
+		2px 4px 1px 3px,
+		3px 5px 1px 4px,
+		4px 5px 1px 4px,
+		5px 5px 1px 4px,
+		1px 3px 1px 2px;
 	-fx-background-radius:
 		2px 2px 0px 0px,
 		1px 1px 0px 0px,
 		0px 0px 0px 0px,
 		0px 0px 0px 0px,
 		1px 1px 0px 0px;
-	-fx-border-color: transparent;
+	-fx-border-color:
+		transparent,
+		transparent;
+	-fx-border-insets:
+		0px 0px 0px 0px,
+		1px 1px 1px 1px;
 }
 #ribbonAppTab:hover {
 	-fx-background-color:
@@ -95,7 +100,7 @@
 }
 #ribbonAppTab .tab-label {
 	-fx-text-fill: white;
-	-fx-padding: 0px 2px 0px 3px;
+	-fx-padding: 0px 3px 0px 2px;
 }
 
 #ribbonTab {
@@ -103,8 +108,15 @@
 	-fx-background-radius:
 		3px 3px 0px 0px,
 		2px 2px 0px 0px;
-	-fx-border-color: transparent;
-	-fx-border-insets: 0px 0px 0px 4px;
+	-fx-border-color:
+		transparent,
+		transparent;
+	-fx-border-insets:
+		0px 0px 0px 2px,
+		1px 1px 1px 3px;
+	-fx-background-insets:
+		0px 0px 0px 2px,
+		1px 1px 1px 3px;
 	-fx-border-radius:
 		2px 2px 0px 0px,
 		1px 1px 0px 0px;
@@ -113,19 +125,14 @@
 	-fx-border-color:
 		#B6BABFff,
 		#F9FBFDff;
-	-fx-border-insets:
-		0px 0px 0px 2px,
-		1px 1px 1px 3px;
 }
 #ribbonTab:selected {
 	-fx-background-color:
 		#B6BABFff,
 		#FFFFFFff;
-	-fx-background-insets:
-		0px 0px 0px 4px,
-		1px 1px 1px 5px;
-	-fx-border-color: transparent transparent #FFFFFFff transparent;
-	-fx-border-insets: 0px 0px 0px 4px;
+	-fx-border-color:
+		transparent transparent #FFFFFFff transparent,
+		transparent;
 }
 #ribbonTab .tab-label {
 	-fx-text-fill: #3B3B3Bff;
