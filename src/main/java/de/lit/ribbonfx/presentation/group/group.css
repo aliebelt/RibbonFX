@@ -17,7 +17,7 @@
 #groupSeparator {
 	-fx-padding: 0px;
 }
-#groupSeparator .line {
+#groupSeparator > .line {
 	-fx-border-color:
 		linear-gradient(from 0% 0% to 0% 100%, #FDFDFDff 0%, #FFFFFFff 100%),
 		linear-gradient(from 0% 0% to 0% 100%, #F6F7F8ff 0%, #B0B6BCff 100%);;

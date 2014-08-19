@@ -1,13 +1,13 @@
-#subSelectorTabPane .tab-content-area {
+#subSelectorTabPane > .tab-content-area {
         -fx-control-inner-background: white;
         -fx-background-color: white;
         -fx-background-repeat: no-repeat;
         -fx-background-position: bottom right;
 }
-#subSelectorTabPane .tab-header-area {
+#subSelectorTabPane > .tab-header-area {
         -fx-padding: 9px 0px 0px 0px;
 }
-#subSelectorTabPane .tab-header-area .tab-header-background {
+#subSelectorTabPane > .tab-header-area > .tab-header-background {
         -fx-background-color:
                 linear-gradient(from 0% 0% to 100% 0%, #BDBEBFff 0%, #DCDDDEff 100%),
                 linear-gradient(from 0% 0% to 100% 0%, #E0E3E7ff 0%, #FBFCFDff 100%),
@@ -18,10 +18,10 @@
                 0px 0px 1px 0px;
         -fx-border-width: 0px;
 }
-#subSelectorTabPane .tab-header-area .headers-region {
+#subSelectorTabPane > .tab-header-area > .headers-region {
         -fx-padding: 0px;
 }
-#subSelectorTabPane .tab-header-area .headers-region .tab {
+#subSelectorTabPane > .tab-header-area > .headers-region > .tab {
         -fx-padding: 0px;
         -fx-background-color: transparent;
         -fx-background-insets: 0px 1px 0px 0px;
@@ -30,11 +30,11 @@
         -fx-border-width: 1px;
         -fx-border-insets: 0px 1px 0px 0px;
 }
-#subSelectorTabPane .tab-header-area .headers-region .tab:hover {
+#subSelectorTabPane > .tab-header-area > .headers-region > .tab:hover {
         -fx-background-color: #D4E6F4ff;
         -fx-border-color: transparent #1F82C0ff #C7CACCff #1F82C0ff;
 }
-#subSelectorTabPane .tab-header-area .headers-region .tab:selected {
+#subSelectorTabPane > .tab-header-area > .headers-region > .tab:selected {
         -fx-background-color:
                 linear-gradient(from 0% 0% to 0% 100%, #1F82C0ff 0%, #88BCE2ff 45%, #88BCE2ff 55%, #1F82C0ff 100%),
                 linear-gradient(from 0% 0% to 100% 0%, #1F82C0ff 0%, #FFFFFF00 10%, #FFFFFF00 90%, #1F82C0ff 100%);
@@ -43,17 +43,17 @@
         -fx-background-repeat: no-repeat;
         -fx-background-position: bottom;
 }
-#subSelectorTabPane .tab-header-area .headers-region .tab .tab-container .focus-indicator {
+#subSelectorTabPane > .tab-header-area > .headers-region > .tab > .tab-container > .focus-indicator {
         -fx-border-width: 0px;
 }
-#subSelectorTabPane .tab-header-area .headers-region .tab .tab-label {
+#subSelectorTabPane > .tab-header-area > .headers-region > .tab > .tab-container > .tab-label {
         -fx-padding: 0px -48px 0px -52px;
         -fx-text-alignment: left;
 }
-#subSelectorTabPane .tab-header-area .headers-region .tab .tab-label .text {
+#subSelectorTabPane > .tab-header-area > .headers-region > .tab > .tab-container > .tab-label > .text {
         -fx-rotate: 90;
         -fx-font-size: 13px;
 }
-#subSelectorTabPane .tab-header-area .headers-region .tab:selected .tab-label {
+#subSelectorTabPane > .tab-header-area > .headers-region > .tab:selected > .tab-container > .tab-label {
         -fx-text-fill: #FFFFFFff;
 }
