@@ -25,6 +25,11 @@
 		0px 0px 1px 0px;
 	-fx-effect: null;
 }
+#ribbonTabPane > .tab-header-area > .headers-region {
+	-fx-min-height: 24px;
+	-fx-pref-height: 24px;
+	-fx-max-height: 24px;
+}
 #ribbonTabPane > .tab-header-area > .headers-region > .tab {
 	-fx-padding: -1px 11px -1px 11px;
 }

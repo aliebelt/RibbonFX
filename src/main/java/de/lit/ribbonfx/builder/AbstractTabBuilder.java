@@ -6,6 +6,8 @@ import de.lit.ribbonfx.model.FooterData;
 
 /**
  * @author aliebelt
+ * @param <T>
+ *            The type parameter.
  */
 public abstract class AbstractTabBuilder<T> {
 
