@@ -3,4 +3,5 @@
 <?import java.lang.*?>
 <?import javafx.scene.control.*?>
 
-<TabPane id="subSelectorTabPane" fx:id="tabPaneSubSelector" side="LEFT" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.lit.ribbonfx.presentation.subselector.SubSelectorPresenter" />
+<TabPane id="subSelectorTabPane" fx:id="tabPaneSubSelector" side="LEFT" tabClosingPolicy="UNAVAILABLE" tabMinWidth="42.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="de.lit.ribbonfx.presentation.subselector.SubSelectorPresenter" />
