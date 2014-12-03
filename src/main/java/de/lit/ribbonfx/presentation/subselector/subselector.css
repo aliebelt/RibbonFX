@@ -1,8 +1,6 @@
 #subSelectorTabPane > .tab-content-area {
-        -fx-control-inner-background: white;
-        -fx-background-color: white;
-        -fx-background-repeat: no-repeat;
-        -fx-background-position: bottom right;
+        -fx-control-inner-background: transparent;
+        -fx-background-color: transparent;
 }
 #subSelectorTabPane > .tab-header-area {
         -fx-padding: 9px 0px 0px 0px;
