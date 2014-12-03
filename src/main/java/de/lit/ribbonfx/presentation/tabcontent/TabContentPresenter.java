@@ -7,6 +7,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
@@ -14,6 +15,7 @@ import javafx.scene.paint.Paint;
 
 public class TabContentPresenter implements Initializable {
 
+	ImageView contentBackgroundImage;
 	Node content;
 	Node footer;
 
@@ -33,10 +35,22 @@ public class TabContentPresenter implements Initializable {
 
 	public void setContent(Node content) {
 		this.content = content;
+		if (this.content != null) {
+			AnchorPane.setBottomAnchor(this.content, 0.0);
+			AnchorPane.setLeftAnchor(this.content, 0.0);
+			AnchorPane.setRightAnchor(this.content, 0.0);
+			AnchorPane.setTopAnchor(this.content, 0.0);
+		}
 	}
 
 	public void setFooter(Node footer) {
 		this.footer = footer;
+		if (this.footer != null) {
+			AnchorPane.setBottomAnchor(this.footer, 0.0);
+			AnchorPane.setLeftAnchor(this.footer, 0.0);
+			AnchorPane.setRightAnchor(this.footer, 0.0);
+			AnchorPane.setTopAnchor(this.footer, 0.0);
+		}
 	}
 
 	public void setAccent(Paint accent) {
@@ -45,31 +59,35 @@ public class TabContentPresenter implements Initializable {
 		this.anchorPaneSecondEmptyRibbonMarker.setStyle("-fx-ribbon-color-base: " + colorCode + ";");
 	}
 
-	public void setContentBackground(Paint contentBackground) {
-		String colorCode = "#" + contentBackground.toString().substring(2);
+	public void setContentBackgroundColor(Paint contentBackgroundColor) {
+		String colorCode = "#" + contentBackgroundColor.toString().substring(2);
 		this.ribbonTabContentContainer.setStyle("-fx-background-color: " + colorCode + ";");
 	}
 
+	public void setContentBackgroundImage(ImageView contentBackgroundImage) {
+		this.contentBackgroundImage = contentBackgroundImage;
+		if (this.contentBackgroundImage != null) {
+			this.contentBackgroundImage.setTranslateX(2);
+			this.contentBackgroundImage.setTranslateY(2);
+			AnchorPane.setBottomAnchor(this.contentBackgroundImage, 0.0);
+			AnchorPane.setRightAnchor(this.contentBackgroundImage, 0.0);
+		}
+	}
+
 	public void setSelected(boolean isSelected) {
+		this.ribbonTabContentContainer.getChildren().clear();
+		this.ribbonTabFooterContainer.getChildren().clear();
+		// Tab-Content-Background-Image
+		if (isSelected && contentBackgroundImage != null) {
+			this.ribbonTabContentContainer.getChildren().add(this.contentBackgroundImage);
+		}
 		// Tab-Content
 		if (isSelected && content != null) {
-			this.ribbonTabContentContainer.getChildren().setAll(this.content);
-			AnchorPane.setBottomAnchor(this.content, 0.0);
-			AnchorPane.setLeftAnchor(this.content, 0.0);
-			AnchorPane.setRightAnchor(this.content, 0.0);
-			AnchorPane.setTopAnchor(this.content, 0.0);
-		} else {
-			this.ribbonTabContentContainer.getChildren().clear();
+			this.ribbonTabContentContainer.getChildren().add(this.content);
 		}
 		// Footer
 		if (isSelected && footer != null) {
 			this.ribbonTabFooterContainer.getChildren().setAll(this.footer);
-			AnchorPane.setBottomAnchor(this.footer, 0.0);
-			AnchorPane.setLeftAnchor(this.footer, 0.0);
-			AnchorPane.setRightAnchor(this.footer, 0.0);
-			AnchorPane.setTopAnchor(this.footer, 0.0);
-		} else {
-			this.ribbonTabFooterContainer.getChildren().clear();
 		}
 	}
 

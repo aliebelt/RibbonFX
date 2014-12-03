@@ -5,6 +5,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.Parent;
 import javafx.scene.control.Tab;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Paint;
 import de.lit.ribbonfx.Ribbon;
@@ -37,7 +38,8 @@ public class RibbonBuilder {
 	AppTabData appTabData;
 	ObservableList<TabData> tabDataList;
 	Paint accent;
-	Paint contentBackground;
+	Paint contentBackgroundColor;
+	ImageView contentBackgroundImage;
 
 	/**
 	 * Hidden constructor
@@ -66,8 +68,13 @@ public class RibbonBuilder {
 		return this;
 	}
 
-	public RibbonBuilder contentBackground(Paint contentBackground) {
-		this.contentBackground = contentBackground;
+	public RibbonBuilder contentBackgroundColor(Paint contentBackgroundColor) {
+		this.contentBackgroundColor = contentBackgroundColor;
+		return this;
+	}
+
+	public RibbonBuilder contentBackgroundImage(ImageView contentBackgroundImage) {
+		this.contentBackgroundImage = contentBackgroundImage;
 		return this;
 	}
 
@@ -90,8 +97,11 @@ public class RibbonBuilder {
 			appTab.disableProperty().bind(this.appTabData.disabled());
 			appTabContentPresenter.setContent(this.appTabData.content().get());
 			appTab.selectedProperty().addListener((Observable o) -> appTabContentPresenter.setSelected(appTab.isSelected()));
-			if (this.contentBackground != null) {
-				appTabContentPresenter.setContentBackground(this.contentBackground);
+			if (this.contentBackgroundColor != null) {
+				appTabContentPresenter.setContentBackgroundColor(this.contentBackgroundColor);
+			}
+			if (this.contentBackgroundImage != null) {
+				appTabContentPresenter.setContentBackgroundImage(this.contentBackgroundImage);
 			}
 			if (this.accent != null) {
 				appTabContentPresenter.setAccent(this.accent);
@@ -155,8 +165,11 @@ public class RibbonBuilder {
 			iTab.disableProperty().bind(iTabData.disabled());
 			iTabContentPresenter.setContent(iTabData.content().get());
 			iTab.selectedProperty().addListener((Observable o) -> iTabContentPresenter.setSelected(iTab.isSelected()));
-			if (this.contentBackground != null) {
-				iTabContentPresenter.setContentBackground(this.contentBackground);
+			if (this.contentBackgroundColor != null) {
+				iTabContentPresenter.setContentBackgroundColor(this.contentBackgroundColor);
+			}
+			if (this.contentBackgroundImage != null) {
+				iTabContentPresenter.setContentBackgroundImage(this.contentBackgroundImage);
 			}
 			if (this.accent != null) {
 				iTabContentPresenter.setAccent(this.accent);
