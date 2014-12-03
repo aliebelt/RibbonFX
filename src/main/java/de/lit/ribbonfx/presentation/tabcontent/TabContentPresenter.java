@@ -67,8 +67,6 @@ public class TabContentPresenter implements Initializable {
 	public void setContentBackgroundImage(ImageView contentBackgroundImage) {
 		this.contentBackgroundImage = contentBackgroundImage;
 		if (this.contentBackgroundImage != null) {
-			this.contentBackgroundImage.setTranslateX(2);
-			this.contentBackgroundImage.setTranslateY(2);
 			AnchorPane.setBottomAnchor(this.contentBackgroundImage, 0.0);
 			AnchorPane.setRightAnchor(this.contentBackgroundImage, 0.0);
 		}
