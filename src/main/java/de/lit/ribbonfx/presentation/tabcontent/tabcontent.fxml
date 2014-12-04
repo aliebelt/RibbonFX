@@ -5,19 +5,26 @@
 <?scenebuilder-stylesheet tabcontent.css?>
 
 <AnchorPane id="" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.lit.ribbonfx.presentation.tabcontent.TabContentPresenter">
-  <children>
-    <AnchorPane id="ribbonTabFirstEmptyRibbonMarker" fx:id="anchorPaneFirstEmptyRibbonMarker" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="1.0" prefWidth="-1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-    <AnchorPane id="ribbonTabSecondEmptyRibbonMarker" fx:id="anchorPaneSecondEmptyRibbonMarker" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="1.0" prefWidth="-1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="1.0" />
-<VBox fx:id="vBoxTabContentContainer" layoutX="2.0" layoutY="2.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
-<children>
-    <AnchorPane fx:id="ribbonTabContentContainer" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0" VBox.vgrow="ALWAYS" /><AnchorPane fx:id="ribbonTabFooterContainer" VBox.vgrow="NEVER" />
-</children>
-</VBox>
-    <AnchorPane id="ribbonToolBar" fx:id="anchorPaneRibbonToolbar" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="0.0" visible="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-      <children>
-        <HBox fx:id="hBoxRibbonGroups" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
-      </children>
-    </AnchorPane>
-    <AnchorPane id="ribbonTabContentBorder" fx:id="anchorPaneContentBorder" mouseTransparent="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-1.0" />
-  </children>
+	<children>
+		<AnchorPane id="ribbonTabFirstEmptyRibbonMarker" fx:id="anchorPaneFirstEmptyRibbonMarker" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="1.0"
+			prefWidth="-1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+		<AnchorPane id="ribbonTabSecondEmptyRibbonMarker" fx:id="anchorPaneSecondEmptyRibbonMarker" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="1.0"
+			prefWidth="-1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="1.0" />
+		<VBox fx:id="vBoxTabContentContainer" layoutX="2.0" layoutY="2.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0"
+			AnchorPane.topAnchor="2.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+			<children>
+				<AnchorPane id="ribbonTabContentContainer" fx:id="anchorPaneContentContainer" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0"
+					AnchorPane.topAnchor="2.0" VBox.vgrow="ALWAYS" />
+				<AnchorPane fx:id="anchorPaneFooterContainer" VBox.vgrow="NEVER" />
+			</children>
+		</VBox>
+		<AnchorPane id="ribbonToolBar" fx:id="anchorPaneRibbonToolbar" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="0.0" visible="true"
+			AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+			<children>
+				<HBox fx:id="hBoxRibbonGroups" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+			</children>
+		</AnchorPane>
+		<AnchorPane id="ribbonTabContentBorder" fx:id="anchorPaneContentBorder" mouseTransparent="true" AnchorPane.bottomAnchor="0.0"
+			AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-1.0" />
+	</children>
 </AnchorPane>

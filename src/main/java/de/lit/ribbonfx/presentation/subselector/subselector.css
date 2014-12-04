@@ -1,5 +1,4 @@
 #subSelectorTabPane > .tab-content-area {
-        -fx-control-inner-background: transparent;
         -fx-background-color: transparent;
 }
 #subSelectorTabPane > .tab-header-area {

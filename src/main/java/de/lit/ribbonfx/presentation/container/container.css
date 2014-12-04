@@ -3,7 +3,7 @@
 	-fx-ribbon-color-base: #006400ff;
 }
 #ribbonTabPane > .tab-content-area {
-	-fx-control-inner-background: transparent;
+	-fx-background-color: transparent;
 }
 #ribbonTabPane > .tab-header-area {
 	-fx-padding: 2px 0px 0px 0px;

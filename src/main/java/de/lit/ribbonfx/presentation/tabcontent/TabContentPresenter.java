@@ -61,7 +61,7 @@ public class TabContentPresenter implements Initializable {
 
 	public void setContentBackgroundColor(Paint contentBackgroundColor) {
 		String colorCode = "#" + contentBackgroundColor.toString().substring(2);
-		this.ribbonTabContentContainer.setStyle("-fx-background-color: " + colorCode + ";");
+		this.anchorPaneContentContainer.setStyle("-fx-ribbon-tab-content-background-color: " + colorCode + ";");
 	}
 
 	public void setContentBackgroundImage(ImageView contentBackgroundImage) {
@@ -73,19 +73,19 @@ public class TabContentPresenter implements Initializable {
 	}
 
 	public void setSelected(boolean isSelected) {
-		this.ribbonTabContentContainer.getChildren().clear();
-		this.ribbonTabFooterContainer.getChildren().clear();
+		this.anchorPaneContentContainer.getChildren().clear();
+		this.anchorPaneFooterContainer.getChildren().clear();
 		// Tab-Content-Background-Image
 		if (isSelected && contentBackgroundImage != null) {
-			this.ribbonTabContentContainer.getChildren().add(this.contentBackgroundImage);
+			this.anchorPaneContentContainer.getChildren().add(this.contentBackgroundImage);
 		}
 		// Tab-Content
 		if (isSelected && content != null) {
-			this.ribbonTabContentContainer.getChildren().add(this.content);
+			this.anchorPaneContentContainer.getChildren().add(this.content);
 		}
 		// Footer
 		if (isSelected && footer != null) {
-			this.ribbonTabFooterContainer.getChildren().setAll(this.footer);
+			this.anchorPaneFooterContainer.getChildren().setAll(this.footer);
 		}
 	}
 
@@ -99,10 +99,10 @@ public class TabContentPresenter implements Initializable {
 	VBox vBoxTabContentContainer;
 
 	@FXML
-	AnchorPane ribbonTabContentContainer;
+	AnchorPane anchorPaneContentContainer;
 
 	@FXML
-	AnchorPane ribbonTabFooterContainer;
+	AnchorPane anchorPaneFooterContainer;
 
 	@FXML
 	AnchorPane anchorPaneContentBorder;
