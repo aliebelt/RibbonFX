@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>de.lit</groupId>
 	<artifactId>ribbonfx</artifactId>
-	<version>1.3.5-SNAPSHOT</version>
+	<version>1.3.6-SNAPSHOT</version>
 	<name>RibbonFX</name>
 
 	<build>
