@@ -1,14 +1,23 @@
 package de.lit.ribbonfx.builder;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import javafx.beans.Observable;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.Parent;
+import javafx.scene.control.SingleSelectionModel;
 import javafx.scene.control.Tab;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Paint;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import de.lit.ribbonfx.Ribbon;
+import de.lit.ribbonfx.SubSelector;
 import de.lit.ribbonfx.actions.ButtonAction;
 import de.lit.ribbonfx.model.AppTabData;
 import de.lit.ribbonfx.model.ButtonData;
@@ -33,6 +42,8 @@ import de.lit.ribbonfx.presentation.tabcontent.TabContentView;
  * @author aliebelt
  */
 public class RibbonBuilder {
+
+	private static final Logger LOG = LoggerFactory.getLogger(Ribbon.class);
 
 	Ribbon ribbon;
 	AppTabData appTabData;
@@ -83,6 +94,7 @@ public class RibbonBuilder {
 		if (this.accent != null) {
 			this.ribbon.setAccent(this.accent);
 		}
+		Map<Tab, SubSelector> subSelectorTab4RibbonTab = new HashMap<>();
 		// App-Tab
 		if (this.appTabData != null) {
 			// Initialize Tab
@@ -96,6 +108,9 @@ public class RibbonBuilder {
 			appTab.textProperty().bind(this.appTabData.title());
 			appTab.disableProperty().bind(this.appTabData.disabled());
 			appTabContentPresenter.setContent(this.appTabData.content().get());
+			if (this.appTabData.content().get() instanceof SubSelector) {
+				subSelectorTab4RibbonTab.put(appTab, (SubSelector) this.appTabData.content().get());
+			}
 			appTab.selectedProperty().addListener((Observable o) -> appTabContentPresenter.setSelected(appTab.isSelected()));
 			if (this.contentBackgroundColor != null) {
 				appTabContentPresenter.setContentBackgroundColor(this.contentBackgroundColor);
@@ -164,6 +179,9 @@ public class RibbonBuilder {
 			iTab.textProperty().bind(iTabData.title());
 			iTab.disableProperty().bind(iTabData.disabled());
 			iTabContentPresenter.setContent(iTabData.content().get());
+			if (iTabData.content().get() instanceof SubSelector) {
+				subSelectorTab4RibbonTab.put(iTab, (SubSelector) iTabData.content().get());
+			}
 			iTab.selectedProperty().addListener((Observable o) -> iTabContentPresenter.setSelected(iTab.isSelected()));
 			if (this.contentBackgroundColor != null) {
 				iTabContentPresenter.setContentBackgroundColor(this.contentBackgroundColor);
@@ -250,6 +268,36 @@ public class RibbonBuilder {
 				}
 			}
 		}
+		SingleSelectionModel<Tab> ribbonTabSelectionModel = this.ribbon.getTabPane().getSelectionModel();
+		logTabSwitching(ribbonTabSelectionModel.getSelectedItem(), subSelectorTab4RibbonTab.get(ribbonTabSelectionModel.getSelectedItem()),
+				ribbonTabSelectionModel);
+		ribbonTabSelectionModel.selectedItemProperty().addListener((p, o, n) -> {
+			logTabSwitching(n, subSelectorTab4RibbonTab.get(n), ribbonTabSelectionModel);
+		});
+		for (Tab iRibbonTabWithSubSelector : subSelectorTab4RibbonTab.keySet()) {
+			SubSelector iSubSelector = subSelectorTab4RibbonTab.get(iRibbonTabWithSubSelector);
+			iSubSelector.getTabPane().getSelectionModel().selectedItemProperty().addListener((p, o, n) -> {
+				logTabSwitching(iRibbonTabWithSubSelector, iSubSelector, ribbonTabSelectionModel);
+			});
+		}
 		return this.ribbon;
 	}
+
+	private void logTabSwitching(Tab tab, SubSelector subSelector, SingleSelectionModel<Tab> tabSelectionModel) {
+		if (tab == null || tabSelectionModel == null || tabSelectionModel.getSelectedItem() != tab) {
+			return;
+		}
+		String message = "Ribbon-Tab has been selected: \"" + tab.getText() + "\"";
+		if (subSelector != null) {
+			if (subSelector.getTabPane().getSelectionModel().getSelectedItem() == null) {
+				return;
+			}
+			String subSelectionText = subSelector.getTabPane().getSelectionModel().getSelectedItem().getText();
+			subSelectionText = subSelectionText.replace("\r\n", " ");
+			subSelectionText = subSelectionText.replace("\n", " ");
+			message += " with Sub-Selection \"" + subSelectionText + "\"";
+		}
+		LOG.info(message);
+	}
+
 }
