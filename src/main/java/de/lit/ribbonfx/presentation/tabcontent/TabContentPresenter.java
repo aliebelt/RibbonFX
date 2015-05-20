@@ -3,6 +3,7 @@ package de.lit.ribbonfx.presentation.tabcontent;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
@@ -40,6 +41,7 @@ public class TabContentPresenter implements Initializable {
 			AnchorPane.setLeftAnchor(this.content, 0.0);
 			AnchorPane.setRightAnchor(this.content, 0.0);
 			AnchorPane.setTopAnchor(this.content, 0.0);
+			Platform.runLater(() -> setSelected(true));
 		}
 	}
 
@@ -50,6 +52,7 @@ public class TabContentPresenter implements Initializable {
 			AnchorPane.setLeftAnchor(this.footer, 0.0);
 			AnchorPane.setRightAnchor(this.footer, 0.0);
 			AnchorPane.setTopAnchor(this.footer, 0.0);
+			Platform.runLater(() -> setSelected(true));
 		}
 	}
 
@@ -69,48 +72,32 @@ public class TabContentPresenter implements Initializable {
 		if (this.contentBackgroundImage != null) {
 			AnchorPane.setBottomAnchor(this.contentBackgroundImage, 0.0);
 			AnchorPane.setRightAnchor(this.contentBackgroundImage, 0.0);
+			Platform.runLater(() -> setSelected(true));
 		}
 	}
 
 	public void setSelected(boolean isSelected) {
-		this.anchorPaneContentContainer.getChildren().clear();
-		this.anchorPaneFooterContainer.getChildren().clear();
 		// Tab-Content-Background-Image
-		if (isSelected && contentBackgroundImage != null) {
+		if (isSelected && contentBackgroundImage != null && content.getParent() != this.anchorPaneContentContainer) {
 			this.anchorPaneContentContainer.getChildren().add(this.contentBackgroundImage);
 		}
 		// Tab-Content
-		if (isSelected && content != null) {
+		if (isSelected && content != null && content.getParent() != this.anchorPaneContentContainer) {
 			this.anchorPaneContentContainer.getChildren().add(this.content);
 		}
 		// Footer
-		if (isSelected && footer != null) {
+		if (isSelected && footer != null && footer.getParent() != this.anchorPaneFooterContainer) {
 			this.anchorPaneFooterContainer.getChildren().setAll(this.footer);
 		}
 	}
 
-	@FXML
-	AnchorPane anchorPaneRibbonToolbar;
-
-	@FXML
-	HBox hBoxRibbonGroups;
-
-	@FXML
-	VBox vBoxTabContentContainer;
-
-	@FXML
-	AnchorPane anchorPaneContentContainer;
-
-	@FXML
-	AnchorPane anchorPaneFooterContainer;
-
-	@FXML
-	AnchorPane anchorPaneContentBorder;
-
-	@FXML
-	AnchorPane anchorPaneFirstEmptyRibbonMarker;
-
-	@FXML
-	AnchorPane anchorPaneSecondEmptyRibbonMarker;
+	@FXML AnchorPane anchorPaneRibbonToolbar;
+	@FXML HBox hBoxRibbonGroups;
+	@FXML VBox vBoxTabContentContainer;
+	@FXML AnchorPane anchorPaneContentContainer;
+	@FXML AnchorPane anchorPaneFooterContainer;
+	@FXML AnchorPane anchorPaneContentBorder;
+	@FXML AnchorPane anchorPaneFirstEmptyRibbonMarker;
+	@FXML AnchorPane anchorPaneSecondEmptyRibbonMarker;
 
 }
